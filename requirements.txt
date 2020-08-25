@@ -1,0 +1,8 @@
+xtsv>=1.0,<2.0
+# Modules with versions pinned
+quntoken==3.1.3
+# Some of them will be on pypi latter...
+https://github.com/dlt-rilmta/emmorphpy/releases/download/v1.1.0/emmorphpy-1.1.0-py3-none-any.whl
+https://github.com/dlt-rilmta/purepospy/releases/download/v1.0.1/purepospy-1.0.1-py3-none-any.whl
+https://github.com/vadno/emconll/releases/download/v1.0.0/emconll-1.0.0-py3-none-any.whl
+https://github.com/dlt-rilmta/emterm/releases/download/v1.0.0/emterm-1.0.0-py3-none-any.whl

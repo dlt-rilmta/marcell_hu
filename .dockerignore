@@ -1,0 +1,5 @@
+nohup.out
+Dockerfile
+__pycache__/
+.git/
+.git*
