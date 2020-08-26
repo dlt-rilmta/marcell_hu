@@ -136,3 +136,8 @@ dmypy.json
 *~
 .*.swp
 
+# Dávid
+samples/
+marcell_hu/add_metadata.py
+marcell_hu/convert2conll.py
+marcell_hu/txt_to_emtsv.py

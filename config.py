@@ -34,6 +34,11 @@ term_list = os.path.join(os.path.dirname(__file__), 'emterm', 'test_termlist.tsv
 em_term = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
            (term_list,), {'source_fields': {'form', 'lemma'}, 'target_fields': ['term']})
 
+# mCoNLL ##############################################################################################################
+m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter', (), {'source_fields': {'form'},
+                                                             # 'target_fields': ["id", "lemma", "upos", "xpos", "feats", "head", "deprel", "deps", "misc", "marcell:ne", "marcell:np"]})
+                                                             'target_fields': []})
+
 # Map module personalities to firendly names...
 # The first name is the default. The order is the display order of the modules
 tools = [(em_token, ('tok', 'emToken')),
@@ -42,7 +47,7 @@ tools = [(em_token, ('tok', 'emToken')),
          (em_conll, ('conll', 'emCoNLL')),
          (em_term, ('term', 'emTerm',)),
          (em_dummy, ('dummy-tagger', 'emDummy')),
-         ]
+         (m_conll, ('mconll', 'mCoNLL'))]
 
 # cat input.txt | ./main.py tok,morph,pos,conv-morph,dep -> cat input.txt | ./main.py tok-dep
 presets = {'annotate': ('Full pipeline', ['tok', 'morph', 'pos', 'dummy-tagger', 'conll'])}  # TODO értelem szerint!
