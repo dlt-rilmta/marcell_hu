@@ -35,9 +35,9 @@ em_term = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixe
            (term_list,), {'source_fields': {'form', 'lemma'}, 'target_fields': ['term']})
 
 # mCoNLL ##############################################################################################################
-m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter', (), {'source_fields': {'form'},
-                                                             # 'target_fields': ["id", "lemma", "upos", "xpos", "feats", "head", "deprel", "deps", "misc", "marcell:ne", "marcell:np"]})
-                                                             'target_fields': []})
+m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter', (), {'source_fields': set(),  # {"form", "wsafter", "anas", "lemma", "xpostag", "upostag", "feats", "NP-BIO", "NER-BIO"},  # {'form'},
+                                                             'target_fields': ["id", "form", "lemma", "upos", "xpos", "feats", "head", "deprel", "deps", "misc", "marcell:ne", "marcell:np"]})
+                                                             # 'target_fields': []})
 
 # Map module personalities to firendly names...
 # The first name is the default. The order is the display order of the modules

@@ -7,6 +7,7 @@ import sys
 class MCoNLL:
 
     pass_header = True
+    fixed_order_tsv_input = True  # TODO set or omit default: False
 
     def __init__(self, source_fields=None, target_fields=None):
         # TODO:
@@ -51,7 +52,7 @@ class MCoNLL:
         """
 
         word_id = 0
-        for line in sen:
+        for line in sen[1:]:
             new_line = []
 
             # new_line = (line[field_names[col]] if col in field_names else '_'
@@ -76,7 +77,8 @@ class MCoNLL:
 
     def prepare_fields(self, field_names):
         """
-        Map the mandatory emtsv field names to the CoNLL names tied to the current indices
+        Map the mandatory emtsv field names to the CoNLL n
+        ames tied to the current indices
         :param field_names: emtsv header
         :return: Mapping of the mandatory CoNLL field names to the current indices
         """
@@ -85,9 +87,10 @@ class MCoNLL:
         #         if emtsv_name in self._col_mapper}
 
         prepared_fields = {}
+        field_names = {0: 'form', 1: 'wsafter', 3: 'lemma', 4: 'xpostag',
+                       5: 'upostag', 6: 'feats', 7: 'NP-BIO', 8: 'NER-BIO'}
 
         for col_num, emtsv_name in field_names.items():
             if emtsv_name in self._col_mapper:
                 prepared_fields[self._col_mapper[emtsv_name]] = col_num
-
         return prepared_fields
