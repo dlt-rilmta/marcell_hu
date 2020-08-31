@@ -35,9 +35,15 @@ em_term = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixe
            (term_list,), {'source_fields': {'form', 'lemma'}, 'target_fields': ['term']})
 
 # mCoNLL ##############################################################################################################
-m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter', (), {'source_fields': set(),  # {"form", "wsafter", "anas", "lemma", "xpostag", "upostag", "feats", "NP-BIO", "NER-BIO"},  # {'form'},
-                                                             'target_fields': ["id", "form", "lemma", "upos", "xpos", "feats", "head", "deprel", "deps", "misc", "marcell:ne", "marcell:np"]})
-                                                             # 'target_fields': []})
+m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter for MARCELL', (),
+           {'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats', 'NP-BIO', 'NER-BIO'},
+            'target_fields': []})
+
+# mMeta ##############################################################################################################
+m_meta = ('marcell_hu', 'MMeta', 'Add metadata', (), {'source_fields':
+                                                          {"id", "form", "lemma", "upos", "xpos", "feats", "head",
+                                                           "deprel", "deps", "misc", "marcell:ne", "marcell:np"},
+                                                      'target_fields': []})
 
 # Map module personalities to firendly names...
 # The first name is the default. The order is the display order of the modules
@@ -47,7 +53,8 @@ tools = [(em_token, ('tok', 'emToken')),
          (em_conll, ('conll', 'emCoNLL')),
          (em_term, ('term', 'emTerm',)),
          (em_dummy, ('dummy-tagger', 'emDummy')),
-         (m_conll, ('mconll', 'mCoNLL'))]
+         (m_conll, ('mconll', 'mCoNLL')),
+         (m_meta, ('mmeta', 'mMeta'))]
 
 # cat input.txt | ./main.py tok,morph,pos,conv-morph,dep -> cat input.txt | ./main.py tok-dep
 presets = {'annotate': ('Full pipeline', ['tok', 'morph', 'pos', 'dummy-tagger', 'conll'])}  # TODO értelem szerint!

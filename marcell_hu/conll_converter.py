@@ -6,32 +6,17 @@ import sys
 
 class MCoNLL:
 
-    pass_header = True
-    fixed_order_tsv_input = True  # TODO set or omit default: False
+    pass_header = False
 
     def __init__(self, source_fields=None, target_fields=None):
-        # TODO:
-        #  bemeneti oszlopok:
-        #  form wsafter anas lemma xpostag upostag feats NP-BIO NER-BIO
-        #  amit ilyenné kéne konvertálni: kimeneti oszlopok:
-        #  "id", "form", "lemma", "upos", "xpos", "feats", "head", "deprel", "deps", "misc", "marcell:ne", "marcell:np"
 
-        self._col_mapper = {'id': 'ID',
-                            'form': 'FORM',
-                            'lemma': 'LEMMA',
-                            'upostag': 'UPOS',
-                            'xpostag': 'XPOS',
-                            'feats': 'FEATS',
-                            'head': 'HEAD',
-                            'deprel': 'DEPREL',
-                            'wsafter': 'MISC',
-                            'NP-BIO': 'MARCELL:NP',
-                            'NER-BIO': 'MARCELL:NE'
-                            }
+        self._conll = ['id', 'form', 'lemma', 'upostag', 'xpostag', 'feats', 'head',
+                       'deprel', 'deps', 'wsafter', 'NER-BIO', 'NP-BIO']
 
-        # The CoNLL columns in order
-        self._conll = ['ID', 'FORM', 'LEMMA', 'UPOS', 'XPOS', 'FEATS', 'HEAD',
-                       'DEPREL', 'DEPS', 'MISC', 'MARCELL:NE', 'MARCELL:NP']
+        self.header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head',
+                       'deprel', 'deps', 'misc', 'marcell:ne', 'marcell:np']
+
+        self.sentence_count = 0
 
         # Field names for e-magyar TSV
         if source_fields is None:
@@ -51,18 +36,22 @@ class MCoNLL:
         :return: A generator yields the output line-by-line
         """
 
+        self.sentence_count += 1
+
+        if self.sentence_count == 1:
+            yield self.header
+
         word_id = 0
+
         for line in sen[1:]:
+
             new_line = []
 
-            # new_line = (line[field_names[col]] if col in field_names else '_'
-            #             for col in self._conll)
-
             for col in self._conll:
-                if col == 'ID':
+                if col == 'id':
                     word_id += 1
                     new_line.append(str(word_id))
-                elif col == 'MISC':
+                elif col == 'wsafter':
                     if line[field_names[col]] == '""':
                         new_line.append('SpaceAfter=No')
                     else:
@@ -82,15 +71,5 @@ class MCoNLL:
         :param field_names: emtsv header
         :return: Mapping of the mandatory CoNLL field names to the current indices
         """
+        return field_names
 
-        # prepared_fields = {self._col_mapper[emtsv_name]: col_num for col_num, emtsv_name in field_names.items()
-        #         if emtsv_name in self._col_mapper}
-
-        prepared_fields = {}
-        field_names = {0: 'form', 1: 'wsafter', 3: 'lemma', 4: 'xpostag',
-                       5: 'upostag', 6: 'feats', 7: 'NP-BIO', 8: 'NER-BIO'}
-
-        for col_num, emtsv_name in field_names.items():
-            if emtsv_name in self._col_mapper:
-                prepared_fields[self._col_mapper[emtsv_name]] = col_num
-        return prepared_fields
