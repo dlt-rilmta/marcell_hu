@@ -36,8 +36,10 @@ em_term = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixe
 
 # mCoNLL ##############################################################################################################
 m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter for MARCELL', (),
-           {'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats', 'NP-BIO', 'NER-BIO'},
-            'target_fields': []})
+           {'source_fields': set(),
+            # {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats', 'NP-BIO', 'NER-BIO'},
+            'target_fields': ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head',
+                              'deprel', 'deps', 'misc', 'marcell:ne', 'marcell:np']})
 
 # mMeta ##############################################################################################################
 m_meta = ('marcell_hu', 'MMeta', 'Add metadata', (), {'source_fields':

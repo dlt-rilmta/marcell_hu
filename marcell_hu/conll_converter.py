@@ -7,9 +7,11 @@ import sys
 class MCoNLL:
 
     pass_header = False
+    fixed_order_tsv_input = True
 
     def __init__(self, source_fields=None, target_fields=None):
 
+        #
         self._conll = ['id', 'form', 'lemma', 'upostag', 'xpostag', 'feats', 'head',
                        'deprel', 'deps', 'wsafter', 'NER-BIO', 'NP-BIO']
 
@@ -71,5 +73,7 @@ class MCoNLL:
         :param field_names: emtsv header
         :return: Mapping of the mandatory CoNLL field names to the current indices
         """
+        field_names = {'form': 0, 'wsafter': 1, 'lemma': 3, 'xpostag': 4,
+                       'upostag': 5, 'feats': 6, 'NP-BIO': 7, 'NER-BIO': 8}
         return field_names
 
