@@ -45,7 +45,7 @@ class MCoNLL:
 
         word_id = 0
 
-        for line in sen[1:]:
+        for line in sen:
 
             new_line = []
 
