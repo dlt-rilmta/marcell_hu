@@ -27,7 +27,6 @@ class MMeta:
                        'misc', 'marcell:ne', 'marcell:np', 'marcell:iate', 'marcell:eurovoc']
 
         self.sentence_count = 0
-        self.paragraph_count = 0
         self.pat_paragraph = re.compile(r'^\d+[.] *§')
         self.doc_type = ''
 
@@ -49,13 +48,14 @@ class MMeta:
         """
         self.sentence_count += 1
 
-        # # todo identifier-hez kell a fájlnév?.hogyan tudok hozzájutni?
+        # # todo identifier-hez kell a fájlnév. hogyan tudok hozzájutni?
         fname_wo_out = 'fájl_név001.txt'  # "_".join(os.path.basename(doc[0]).split("_")[1:])
         identifier = os.path.splitext(fname_wo_out)[0]
 
         orig_sent = []
 
         if self.sentence_count == 1:
+            sen = sen[1:]
             # from here: collect and process global metadatas (per document)
             """
             Example output global metadata
@@ -87,7 +87,7 @@ class MMeta:
 
                 elif not title_end:
                     lemmas.append(line[2])
-                    if self.is_huntype(line[2]):
+                    if self._is_huntype(line[2]):
                         self.doc_type = line[2]
                         title += self.doc_type
                         title_end = True
@@ -95,7 +95,7 @@ class MMeta:
                     else:
                         title += line[1] + space
 
-            for metadata in self.get_metadatas(topic, identifier, lemmas,
+            for metadata in self._get_metadatas(topic, identifier, lemmas,
                                                '# global.columns = ' + ' '.join(self.header), title.split()):
                 yield metadata
 
@@ -144,16 +144,16 @@ class MMeta:
         """
         return field_names
 
-    def get_eng_type(self, word):
-        if self.is_huntype(word):
+    def _get_eng_type(self, word):
+        if self._is_huntype(word):
             return self.doc_types_hun_eng[word]
         return "UNKNOWN"
 
-    def is_huntype(self, word):
+    def _is_huntype(self, word):
         return word in self.doc_types_hun_eng.keys()
 
-    def get_metadatas(self, topic, identifier, lemmas, columns, title):
-        eng_type = self.get_eng_type(lemmas[-1])
+    def _get_metadatas(self, topic, identifier, lemmas, columns, title):
+        eng_type = self._get_eng_type(lemmas[-1])
         hun_type = lemmas[-1]
 
         if hun_type != 'törvény':
