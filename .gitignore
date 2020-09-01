@@ -140,3 +140,5 @@ dmypy.json
 samples/
 marcell_hu/convert2conll.py
 marcell_hu/txt_to_emtsv.py
+marcell_hu/correcter.py
+out_*.txt
