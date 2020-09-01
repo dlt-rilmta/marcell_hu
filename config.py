@@ -51,17 +51,10 @@ em_ner = ('huntag', 'Tagger', 'emNER', ({'cfg_file': cfg_file, 'model_name': mod
 
 em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (), {'source_fields': {'form'}, 'target_fields': []})
 
-# emTerm ##############################################################################################################
-
-term_list = os.path.join(os.path.dirname(__file__), 'emterm', 'test_termlist.tsv')
-em_term = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
-           (term_list,), {'source_fields': {'form', 'lemma'}, 'target_fields': ['term']})
-
 # mCoNLL ##############################################################################################################
 
 m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter for MARCELL', (),
            {'source_fields': set(),
-            # {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats', 'NP-BIO', 'NER-BIO'},
             'target_fields': ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head',
                               'deprel', 'deps', 'misc', 'marcell:ne', 'marcell:np']})
 
@@ -70,7 +63,32 @@ m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter for MARCELL', (),
 m_meta = ('marcell_hu', 'MMeta', 'Add metadata', (), {'source_fields':
                                                           {"id", "form", "lemma", "upos", "xpos", "feats", "head",
                                                            "deprel", "deps", "misc", "marcell:ne", "marcell:np"},
-                                                      'target_fields': []})
+                                                      'target_fields': ['marcell:iate', 'marcell:eurovoc']})
+
+# emTerm for iate #####################################################################################################
+
+term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'iate.tsv')
+em_term_iate = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
+                (term_list,), {'source_fields': {'form', 'lemma'},
+                               'target_fields': []})  # ['term']})
+
+# emTerm for eurovoc ##################################################################################################
+term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'eurovoc.tsv')
+em_term_eurovoc = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
+                   (term_list,), {'source_fields': {'form', 'lemma'},
+                                  'target_fields': []})  # ['term']})
+
+# # mIateEurovoc ########################################################################################################
+# dir_part = os.path.join(
+#     os.path.dirname(__file__),
+#     'marcell_hu',
+#     'iate_eurovoc',
+#     'extract_terms',
+#     'tokterms'
+# )
+#
+# iate_path = os.path.join(dir_part, 'iate.tsv')
+# eurovoc_path = os.path.join(dir_part, 'eurovoc.tsv')
 
 # Map module personalities to firendly names...
 # The first name is the default. The order is the display order of the modules
@@ -81,10 +99,11 @@ tools = [(em_token, ('tok', 'emToken')),
          (em_ner, ('ner', 'emNER')),
          (em_morph2ud, ('conv-morph', 'emmorph2ud')),
          (em_conll, ('conll', 'emCoNLL')),
-         (em_term, ('term', 'emTerm',)),
          (em_dummy, ('dummy-tagger', 'emDummy')),
          (m_conll, ('mconll', 'mCoNLL')),
-         (m_meta, ('mmeta', 'mMeta'))]
+         (m_meta, ('mmeta', 'mMeta')),
+         (em_term_iate, ('term-iate', 'emTerm',)),
+         (em_term_eurovoc, ('term-eurovoc', 'emTerm',))]
 
 # cat input.txt | ./main.py tok,morph,pos,conv-morph,dep -> cat input.txt | ./main.py tok-dep
 presets = {'annotate': ('Full pipeline', ['tok', 'morph', 'pos', 'dummy-tagger', 'conll'])}  # TODO értelem szerint!

@@ -5,7 +5,7 @@ import re
 
 
 class MMeta:
-    pass_header = False
+    pass_header = True
 
     def __init__(self, source_fields=None, target_fields=None):
 
