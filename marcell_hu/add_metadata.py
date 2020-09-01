@@ -26,9 +26,13 @@ class MMeta:
         self.header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head', 'deprel', 'deps',
                        'misc', 'marcell:ne', 'marcell:np', 'marcell:iate', 'marcell:eurovoc']
 
+        self.accent_dict = {"á": "a", "ü": "u", "ó": "o", "ö": "o", "ő": "o", "ú": "u", "é": "e", "ű": "u", "í": "i"}
+
         self.sentence_count = 0
         self.pat_paragraph = re.compile(r'^\d+[.] *§')
+        self.pat_whitespaces = re.compile(r'\W')
         self.doc_type = ''
+        self.identifier = ''
 
         if source_fields is None:
             source_fields = set()
@@ -49,8 +53,6 @@ class MMeta:
         self.sentence_count += 1
 
         # # todo identifier-hez kell a fájlnév. hogyan tudok hozzájutni?
-        fname_wo_out = 'fájl_név001.txt'  # "_".join(os.path.basename(doc[0]).split("_")[1:])
-        identifier = os.path.splitext(fname_wo_out)[0]
 
         orig_sent = []
 
@@ -95,8 +97,10 @@ class MMeta:
                     else:
                         title += line[1] + space
 
-            for metadata in self._get_metadatas(topic, identifier, lemmas,
-                                               '# global.columns = ' + ' '.join(self.header), title.split()):
+            self.identifier = self.remove_accent(self.pat_whitespaces.sub('', '_'.join(title.split()))).lower()
+
+            for metadata in self._get_metadatas(topic, self.identifier, lemmas,
+                                                '# global.columns = ' + ' '.join(self.header), title.split()):
                 yield metadata
 
         #     end of collecting and processing of global metadatas
@@ -117,17 +121,17 @@ class MMeta:
                 paragraph_num = int(paragraph.group().split(".")[0])
 
                 if paragraph_num != 1:
-                    par_id = "# newpar id = " + identifier + '-p' + str(paragraph_num)
+                    par_id = "# newpar id = " + self.identifier + '-p' + str(paragraph_num)
             elif self.sentence_count == 1:
-                par_id = "# newpar id = " + identifier + '-p' + str(paragraph_num)
+                par_id = "# newpar id = " + self.identifier + '-p' + str(paragraph_num)
 
             for metadata in ([par_id],
-                             ["# sent_id = " + identifier + "-s" + str(self.sentence_count) + '-p' + str(
+                             ["# sent_id = " + self.identifier + "-s" + str(self.sentence_count) + '-p' + str(
                                  paragraph_num)],
                              ["# text = " + sentence]):
                 yield metadata
         else:
-            for metadata in (["# sent_id = " + identifier + "-s" + str(self.sentence_count)],
+            for metadata in (["# sent_id = " + self.identifier + "-s" + str(self.sentence_count)],
                              ["# text = " + sentence]):
                 yield metadata
 
@@ -173,3 +177,17 @@ class MMeta:
             metadatas.append(["# topic = " + topic])
 
         return metadatas
+
+    def remove_accent(self, string):
+        """
+        Replacing accented characters to non accented characters in a string:
+        öüóőúéáűí -> ouooueaui
+
+        :param s: string
+        :return: string without accented chars
+        """
+
+        for key in self.accent_dict:
+            string = string.replace(key, self.accent_dict[key])
+
+        return string
