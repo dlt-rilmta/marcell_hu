@@ -65,30 +65,16 @@ m_meta = ('marcell_hu', 'MMeta', 'Add metadata', (), {'source_fields':
                                                            "deprel", "deps", "misc", "marcell:ne", "marcell:np"},
                                                       'target_fields': []})
 
-# # emTerm for iate #####################################################################################################
-#
-# term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'iate.tsv')
-# em_term_iate = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
-#                 (term_list,), {'source_fields': {'form', 'lemma'},
-#                                'target_fields': ['marcell:iate']})
-#
-# # emTerm for eurovoc ##################################################################################################
-# term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'eurovoc.tsv')
-# em_term_eurovoc = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
-#                    (term_list,), {'source_fields': {'form', 'lemma'},
-#                                   'target_fields': ['marcell:eurovoc']})
-
 # emTerm for iate #####################################################################################################
 
-
 term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'iate.tsv')
-em_term_iate = ('marcell_hu', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
-                   (term_list,), {'source_fields': {'form', 'lemma'},
-                                  'target_fields': ['marcell:iate']})
-# emTerm for eurovoc ##################################################################################################
+em_term_iate = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
+                (term_list,), {'source_fields': {'form', 'lemma'},
+                               'target_fields': ['marcell:iate']})
 
+# emTerm for eurovoc ##################################################################################################
 term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'eurovoc.tsv')
-em_term_eurovoc = ('marcell_hu', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
+em_term_eurovoc = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
                    (term_list,), {'source_fields': {'form', 'lemma'},
                                   'target_fields': ['marcell:eurovoc']})
 
