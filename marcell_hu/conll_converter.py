@@ -7,7 +7,7 @@ import sys
 class MCoNLL:
 
     pass_header = False
-    fixed_order_tsv_input = True
+    fixed_order_tsv_input = False
 
     def __init__(self, source_fields=None, target_fields=None):
 
@@ -15,10 +15,10 @@ class MCoNLL:
         self._conll = ['id', 'form', 'lemma', 'upostag', 'xpostag', 'feats', 'head',
                        'deprel', 'deps', 'wsafter', 'NER-BIO', 'NP-BIO']
 
-        self.header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head',
+        self._header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head',
                        'deprel', 'deps', 'misc', 'marcell:ne', 'marcell:np']
 
-        self.sentence_count = 0
+        self._sentence_count = 0
 
         # Field names for e-magyar TSV
         if source_fields is None:
@@ -38,21 +38,18 @@ class MCoNLL:
         :return: A generator yields the output line-by-line
         """
 
-        self.sentence_count += 1
+        self._sentence_count += 1
 
-        if self.sentence_count == 1:
-            yield self.header
+        if self._sentence_count == 1:
+            yield self._header
 
-        word_id = 0
-
-        for line in sen:
+        for i, line in enumerate(sen, start=1):
 
             new_line = []
 
             for col in self._conll:
                 if col == 'id':
-                    word_id += 1
-                    new_line.append(str(word_id))
+                    new_line.append(str(i))
                 elif col == 'wsafter':
                     if line[field_names[col]] == '""':
                         new_line.append('SpaceAfter=No')
@@ -73,6 +70,9 @@ class MCoNLL:
         :param field_names: emtsv header
         :return: Mapping of the mandatory CoNLL field names to the current indices
         """
+        # print(field_names)
+        # return [field_names['form'], field_names['wsafter'], field_names['lemma'], field_names['xpostag'],
+        #         field_names['upostag'], field_names['feats'], field_names['NP-BIO'], field_names['NER-BIO']]
         field_names = {'form': 0, 'wsafter': 1, 'lemma': 3, 'xpostag': 4,
                        'upostag': 5, 'feats': 6, 'NP-BIO': 7, 'NER-BIO': 8}
         return field_names

@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
 
-import os
 import re
 
 
@@ -9,30 +8,30 @@ class MMeta:
 
     def __init__(self, source_fields=None, target_fields=None):
 
-        self.doc_types_hun_eng = {"határozat": "decree",
-                                  "törvény": "law",
-                                  "állásfoglalás": "position",
-                                  "rendelet": "regulation",
-                                  "intézkedés": "act",
-                                  "közlemény": "notice",
-                                  "nyilatkozat": "declaration",
-                                  "parancs": "order",
-                                  "utasítás": "ordinance",
-                                  "szakutasítás": "ordinance",
-                                  "végzés": "judgment",
-                                  "tájékoztató": "notification",
-                                  "ISMERETLEN": "UNDEFINED"}
+        self._doc_types_hun_eng = {"határozat": "decree",
+                                   "törvény": "law",
+                                   "állásfoglalás": "position",
+                                   "rendelet": "regulation",
+                                   "intézkedés": "act",
+                                   "közlemény": "notice",
+                                   "nyilatkozat": "declaration",
+                                   "parancs": "order",
+                                   "utasítás": "ordinance",
+                                   "szakutasítás": "ordinance",
+                                   "végzés": "judgment",
+                                   "tájékoztató": "notification",
+                                   "ISMERETLEN": "UNDEFINED"}
 
-        self.header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head', 'deprel', 'deps',
-                       'misc', 'marcell:ne', 'marcell:np', 'marcell:iate', 'marcell:eurovoc']
+        self._header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head', 'deprel', 'deps',
+                        'misc', 'marcell:ne', 'marcell:np', 'marcell:iate', 'marcell:eurovoc']
 
-        self.accent_dict = {"á": "a", "ü": "u", "ó": "o", "ö": "o", "ő": "o", "ú": "u", "é": "e", "ű": "u", "í": "i"}
+        self._accent_dict = {"á": "a", "ü": "u", "ó": "o", "ö": "o", "ő": "o", "ú": "u", "é": "e", "ű": "u", "í": "i"}
 
-        self.sentence_count = 0
-        self.pat_paragraph = re.compile(r'^\d+[.] *§')
-        self.pat_whitespaces = re.compile(r'\W')
-        self.doc_type = ''
-        self.identifier = ''
+        self._sentence_count = 0
+        self._pat_paragraph = re.compile(r'^\d+[.] *§')
+        self._pat_whitespaces = re.compile(r'\W')
+        self._doc_type = ''
+        self._identifier = ''
 
         if source_fields is None:
             source_fields = set()
@@ -50,14 +49,11 @@ class MMeta:
         :param field_names: The name of the fields mapped to the column indices
         :return: A generator yields the output line-by-line
         """
-        self.sentence_count += 1
-
-        # # todo identifier-hez kell a fájlnév. hogyan tudok hozzájutni?
-
+        self._sentence_count += 1
         orig_sent = []
 
-        if self.sentence_count == 1:
-            sen = sen[1:]
+        if self._sentence_count == 1:
+            # sen = sen[1:]
             # from here: collect and process global metadatas (per document)
             """
             Example output global metadata
@@ -90,17 +86,18 @@ class MMeta:
                 elif not title_end:
                     lemmas.append(line[2])
                     if self._is_huntype(line[2]):
-                        self.doc_type = line[2]
-                        title += self.doc_type
+                        self._doc_type = line[2]
+                        title += self._doc_type
                         title_end = True
                         is_topic = True
                     else:
                         title += line[1] + space
 
-            self.identifier = self.remove_accent(self.pat_whitespaces.sub('', '_'.join(title.split()))).lower()
+            self._identifier = self._pat_whitespaces.sub('', '_'.join(title.split())).lower(). \
+                translate(str.maketrans(self._accent_dict))
 
-            for metadata in self._get_metadatas(topic, self.identifier, lemmas,
-                                                '# global.columns = ' + ' '.join(self.header), title.split()):
+            for metadata in self._get_metadatas(topic, self._identifier, lemmas,
+                                                '# global.columns = ' + ' '.join(self._header).upper(), title.split()):
                 yield metadata
 
         #     end of collecting and processing of global metadatas
@@ -114,24 +111,24 @@ class MMeta:
         paragraph_num = 1
         sentence = "".join(orig_sent)
 
-        if self.doc_type == "törvény" or self.doc_type == "rendelet":
-            paragraph = self.pat_paragraph.match(sentence)
+        if self._doc_type == "törvény" or self._doc_type == "rendelet":
+            paragraph = self._pat_paragraph.match(sentence)
             par_id = ""
-            if self.sentence_count > 1 and paragraph:
+            if self._sentence_count > 1 and paragraph:
                 paragraph_num = int(paragraph.group().split(".")[0])
 
                 if paragraph_num != 1:
-                    par_id = "# newpar id = " + self.identifier + '-p' + str(paragraph_num)
-            elif self.sentence_count == 1:
-                par_id = "# newpar id = " + self.identifier + '-p' + str(paragraph_num)
+                    par_id = "# newpar id = " + self._identifier + '-p' + str(paragraph_num)
+            elif self._sentence_count == 1:
+                par_id = "# newpar id = " + self._identifier + '-p' + str(paragraph_num)
 
             for metadata in ([par_id],
-                             ["# sent_id = " + self.identifier + "-s" + str(self.sentence_count) + '-p' + str(
+                             ["# sent_id = " + self._identifier + "-s" + str(self._sentence_count) + '-p' + str(
                                  paragraph_num)],
                              ["# text = " + sentence]):
                 yield metadata
         else:
-            for metadata in (["# sent_id = " + self.identifier + "-s" + str(self.sentence_count)],
+            for metadata in (["# sent_id = " + self._identifier + "-s" + str(self._sentence_count)],
                              ["# text = " + sentence]):
                 yield metadata
 
@@ -150,11 +147,11 @@ class MMeta:
 
     def _get_eng_type(self, word):
         if self._is_huntype(word):
-            return self.doc_types_hun_eng[word]
+            return self._doc_types_hun_eng[word]
         return "UNKNOWN"
 
     def _is_huntype(self, word):
-        return word in self.doc_types_hun_eng.keys()
+        return word in self._doc_types_hun_eng.keys()
 
     def _get_metadatas(self, topic, identifier, lemmas, columns, title):
         eng_type = self._get_eng_type(lemmas[-1])
@@ -173,21 +170,7 @@ class MMeta:
 
         metadatas = [[columns], [newdoc_id], [date], [title], [hun_type], [eng_type], [issuer]]
 
-        if topic:
+        if topic != '':
             metadatas.append(["# topic = " + topic])
 
         return metadatas
-
-    def remove_accent(self, string):
-        """
-        Replacing accented characters to non accented characters in a string:
-        öüóőúéáűí -> ouooueaui
-
-        :param s: string
-        :return: string without accented chars
-        """
-
-        for key in self.accent_dict:
-            string = string.replace(key, self.accent_dict[key])
-
-        return string

@@ -54,7 +54,7 @@ em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (), {'source_fields': {'f
 # mCoNLL ##############################################################################################################
 
 m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter for MARCELL', (),
-           {'source_fields': set(),
+           {'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats', 'NP-BIO', 'NER-BIO'},  # set(),
             'target_fields': ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head',
                               'deprel', 'deps', 'misc', 'marcell:ne', 'marcell:np']})
 
