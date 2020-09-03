@@ -30,7 +30,7 @@ class MMeta:
         self._sentence_count = 0
         self._pat_paragraph = re.compile(r'^\d+[.] *§')
         self._pat_whitespaces = re.compile(r'\W')
-        self._doc_type = ''
+        self._doc_type = 'ISMERETLEN'
         self._identifier = ''
 
         if source_fields is None:
@@ -69,14 +69,6 @@ class MMeta:
         :return: Mapping of the mandatory CoNLL field names to the current indices
         """
         return field_names
-
-    def _get_eng_type(self, word):
-        if self._is_huntype(word):
-            return self._doc_types_hun_eng[word]
-        return "UNKNOWN"
-
-    def _is_huntype(self, word):
-        return word in self._doc_types_hun_eng.keys()
 
     def _get_global_metadatas(self, sen):
         """
@@ -117,20 +109,25 @@ class MMeta:
 
             elif title_end is False:
                 # lemmas.append(line[2])
-                if self._is_huntype(line[2]):
+                if line[2] in self._doc_types_hun_eng.keys():
                     self._doc_type = line[2]
                     title += self._doc_type
                     title_end = True
                     is_topic = True
+
+                # átlagos rövid cím legfelső határa: ha nincs törvénytípus, így nem egy hosszú cím lesz az azonosító
+                elif i == 9:
+                    title_end = True
                 else:
                     title += line[1] + space
 
-        self._identifier = self._pat_whitespaces.sub('', '_'.join(title.split())).lower(). \
+        splitted_title = title.split()
+        self._identifier = self._pat_whitespaces.sub('', '_'.join(splitted_title[-1:] + splitted_title[:-1])).lower(). \
             translate(str.maketrans(self._accent_dict))
 
         # From here: finalize global metadata values
         columns = '# global.columns = ' + ' '.join(self._header).upper()
-        eng_type = self._get_eng_type(self._doc_type)
+        eng_type = self._doc_types_hun_eng[self._doc_type]  # self._doc_types_hun_eng.get(self._doc_type, 'UNKNOWN')
         hun_type = self._doc_type
 
         issuer = title.split()[-2] if hun_type != 'törvény' else 'parlament'
