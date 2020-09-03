@@ -32,6 +32,7 @@ class MMeta:
         self._pat_whitespaces = re.compile(r'\W')
         self._doc_type = 'ISMERETLEN'
         self._identifier = ''
+        self._paragraph_number = 1
 
         if source_fields is None:
             source_fields = set()
@@ -126,24 +127,24 @@ class MMeta:
             translate(str.maketrans(self._accent_dict))
 
         # From here: finalize global metadata values
-        columns = '# global.columns = ' + ' '.join(self._header).upper()
+        columns = f'# global.columns = {" ".join(self._header).upper()}'
         eng_type = self._doc_types_hun_eng[self._doc_type]  # self._doc_types_hun_eng.get(self._doc_type, 'UNKNOWN')
         hun_type = self._doc_type
 
         issuer = title.split()[-2] if hun_type != 'törvény' else 'parlament'
-        issuer = "# issuer = " + issuer
+        issuer = f'# issuer = {issuer}'
 
-        hun_type = "# type = " + hun_type
-        eng_type = "# entype = " + eng_type
+        hun_type = f'# type = {hun_type}'
+        eng_type = f'# entype = {eng_type}'
 
-        title = "# title = " + title
-        newdoc_id = "# newdoc id = hu-" + self._identifier
-        date = "# date = " + date.split("/")[-1].replace(".", "")  # lemmas[0].split("/")[-1].replace(".", "")
+        title = f'# title = {title}'
+        newdoc_id = f'# newdoc id = hu-{self._identifier}'
+        date = f'# date = {date.split("/")[-1].replace(".", "")}'  # lemmas[0].split("/")[-1].replace(".", "")
 
         global_metadatas = [[columns], [newdoc_id], [date], [title], [hun_type], [eng_type], [issuer]]
 
         if topic != '':
-            global_metadatas.append(["# topic = " + topic])
+            global_metadatas.append([f'# topic = {topic}'])
 
         return global_metadatas
 
@@ -154,24 +155,30 @@ class MMeta:
             orig_sent.append(line[1] + space)
 
         # from here: get metadatas per sentence
-        paragraph_num = 1
-        sentence = "".join(orig_sent)
+        sentence = ''.join(orig_sent)
+        sent_id = f'# sent_id = {self._identifier}-s{self._sentence_count}'
+        par_id = ''
+        metadatad_per_sentence = []
 
         if self._doc_type == "törvény" or self._doc_type == "rendelet":
             paragraph = self._pat_paragraph.match(sentence)
-            par_id = ""
+
             if self._sentence_count > 1 and paragraph:
-                paragraph_num = int(paragraph.group().split(".")[0])
+                self._paragraph_number = int(paragraph.group().split(".")[0])
 
-                if paragraph_num != 1:
-                    par_id = "# newpar id = " + self._identifier + '-p' + str(paragraph_num)
+                if self._paragraph_number != 1:
+                    par_id = f'{self._identifier}-p{self._paragraph_number}'
+
             elif self._sentence_count == 1:
-                par_id = "# newpar id = " + self._identifier + '-p' + str(paragraph_num)
+                par_id = f'{self._identifier}-p{self._paragraph_number}'
 
-            return ([par_id],
-                    ["# sent_id = " + self._identifier + "-s" + str(self._sentence_count) + '-p' + str(
-                        paragraph_num)],
-                    ["# text = " + sentence])
-        else:
-            return (["# sent_id = " + self._identifier + "-s" + str(self._sentence_count)],
-                    ["# text = " + sentence])
+            sent_id = f'# sent_id = {self._identifier}-s{self._sentence_count}-p{self._paragraph_number}'
+
+        if par_id != '':
+            par_id = f'# newpar id = {par_id}'
+            metadatad_per_sentence.append([par_id])
+
+        metadatad_per_sentence.append([sent_id])
+        metadatad_per_sentence.append([f'# text = {sentence}'])
+
+        return metadatad_per_sentence
