@@ -54,15 +54,13 @@ em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (), {'source_fields': {'f
 # mCoNLL ##############################################################################################################
 
 m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter for MARCELL', (),
-           {'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats', 'NP-BIO', 'NER-BIO'},  # set(),
-            'target_fields': ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head',
-                              'deprel', 'deps', 'misc', 'marcell:ne', 'marcell:np']})
+           {'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats',
+                              'NP-BIO-FIXED', 'NER-BIO-FIXED'},  # set(),
+            'target_fields': []})
 
 # mMeta ##############################################################################################################
 
-m_meta = ('marcell_hu', 'MMeta', 'Add metadata', (), {'source_fields':
-                                                          {"id", "form", "lemma", "upos", "xpos", "feats", "head",
-                                                           "deprel", "deps", "misc", "marcell:ne", "marcell:np"},
+m_meta = ('marcell_hu', 'MMeta', 'Add metadata', (), {'source_fields': {'form', 'lemma'},
                                                       'target_fields': []})
 
 # emTerm for iate #####################################################################################################
@@ -78,10 +76,17 @@ em_term_eurovoc = ('emterm', 'EmTerm', 'Mark multiword terminology expressions f
                    (term_list,), {'source_fields': {'form', 'lemma'},
                                   'target_fields': ['marcell:eurovoc']})
 
+# emIOBUtils ###########################################################################################################
+
+emiobutils_maxnp = ('emiobutils', 'EmIOBUtils', 'IOB format converter and fixer for maxNP', (),
+                    {'out_style': 'IOB2', 'source_fields': {'NP-BIO'}, 'target_fields': ['NP-BIO-FIXED']})
+
+emiobutils_ner = ('emiobutils', 'EmIOBUtils', 'IOB format converter and fixer for NER', (),
+                  {'out_style': 'IOB2', 'source_fields': {'NER-BIO'}, 'target_fields': ['NER-BIO-FIXED']})
+
 # mCorrect #########################################################################################################
 m_correct = ('marcell_hu', 'MCorrect', 'Last module of MARCELL modules, which finalizes the output', (),
-             {'source_fields': {"id", "form", "lemma", "upos", "xpos", "feats", "head", "deprel",
-                                 "deps", "misc", "marcell:ne", "marcell:np", 'marcell:iate', 'marcell:eurovoc'},
+             {'source_fields': {'marcell:iate', 'marcell:eurovoc'},
               'target_fields': []})
 
 # Map module personalities to firendly names...
@@ -98,6 +103,8 @@ tools = [(em_token, ('tok', 'emToken')),
          (m_meta, ('mmeta', 'mMeta')),
          (em_term_iate, ('term-iate', 'emTerm',)),
          (em_term_eurovoc, ('term-eurovoc', 'emTerm',)),
+         (emiobutils_maxnp, ('fix-np', 'fix-chunk', 'emIOBUtils-NP')),
+         (emiobutils_ner, ('fix-ner', 'fix-ner', 'emIOBUtils-NER')),
          (m_correct, ('mcorrect', 'mCorrect'))]
 
 # cat input.txt | ./main.py tok,morph,pos,conv-morph,dep -> cat input.txt | ./main.py tok-dep

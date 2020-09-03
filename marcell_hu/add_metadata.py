@@ -53,7 +53,6 @@ class MMeta:
         orig_sent = []
 
         if self._sentence_count == 1:
-            # sen = sen[1:]
             # from here: collect and process global metadatas (per document)
             """
             Example output global metadata
@@ -134,8 +133,8 @@ class MMeta:
 
         # end of collect and process of metadatas per sentence
 
-        for line in sen:
-            yield line
+        yield from sen
+
 
     def prepare_fields(self, field_names):
         """
@@ -156,6 +155,9 @@ class MMeta:
     def _get_metadatas(self, topic, identifier, lemmas, columns, title):
         eng_type = self._get_eng_type(lemmas[-1])
         hun_type = lemmas[-1]
+
+        # issuer = 'parlament' if hun_type == 'törvény' else title[2]
+        # issuer = "# issuer = " + issuer
 
         if hun_type != 'törvény':
             issuer = "# issuer = " + title[-2]

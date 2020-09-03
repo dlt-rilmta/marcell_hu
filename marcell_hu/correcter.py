@@ -23,10 +23,8 @@ class MCorrect:
         """
 
         for line in sen:
-            line[10] = line[10].replace('1', 'B').replace('E', 'I')
-            line[11] = line[11].replace('1', 'B').replace('E', 'I')
-            line[12] = line[12].replace('×', ';')
-            line[13] = line[13].replace('×', ';')
+            line[field_names[0]] = line[field_names[0]].replace('×', ';')
+            line[field_names[1]] = line[field_names[1]].replace('×', ';')
 
             yield line
 
@@ -36,4 +34,4 @@ class MCorrect:
         :param field_names: emtsv header
         :return: Mapping of the mandatory CoNLL field names to the current indices
         """
-        return field_names
+        return [field_names['marcell:iate'], field_names['marcell:eurovoc']]
