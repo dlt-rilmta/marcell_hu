@@ -164,10 +164,10 @@ class MMeta:
         orig_sent = [line[1] + ' ' if line[9] == '_' else line[1] + '' for line in sen]
         sentence = ''.join(orig_sent)
         sent_id = f'# sent_id = {self._identifier}-s{self._sentence_count}'
-        par_id = ''
         metadatad_per_sentence = []
 
         if self._doc_type == "törvény" or self._doc_type == "rendelet":
+            par_id = ''
             paragraph = self._pat_paragraph.match(sentence)
 
             if paragraph or self._sentence_count == 1:
@@ -178,9 +178,9 @@ class MMeta:
 
             sent_id += f'-p{self._paragraph_number}'
 
-        if par_id != '':
-            par_id = f'# newpar id = {par_id}'
-            metadatad_per_sentence.append([par_id])
+            if par_id != '':
+                par_id = f'# newpar id = {par_id}'
+                metadatad_per_sentence.append([par_id])
 
         metadatad_per_sentence.append([sent_id])
         metadatad_per_sentence.append([f'# text = {sentence}'])
