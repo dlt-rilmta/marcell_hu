@@ -125,19 +125,17 @@ class MMeta:
 
         splitted_title = title.split()
 
-        self._identifier = self._pat_whitespaces.sub('', '_'.join(splitted_title[-1:] + splitted_title[:-1])).lower(). \
-            translate(self._accent_table)
+        self._identifier = self._pat_whitespaces.sub('',
+                                                     f'{self._prefix_dict[splitted_title[-1]]}'
+                                                     f'_{"_".join(splitted_title[:-1]).lower().translate(self._accent_table)}')
 
         # From here: finalize global metadata values
         columns = f'# global.columns = {" ".join(self._header).upper()}'
-        eng_type = self._doc_types_hun_eng[self._doc_type]  # self._doc_types_hun_eng.get(self._doc_type, 'UNKNOWN')
-        hun_type = self._doc_type
+        eng_type = f'# entype = {self._doc_types_hun_eng[self._doc_type]}' # self._doc_types_hun_eng.get(self._doc_type, 'UNKNOWN')
+        hun_type = f'# type = {self._doc_type}'
 
-        issuer = title.split()[-2] if hun_type != 'törvény' else 'parlament'
+        issuer = title.split()[-2] if self._doc_type != 'törvény' else 'parlament'
         issuer = f'# issuer = {issuer}'
-
-        hun_type = f'# type = {hun_type}'
-        eng_type = f'# entype = {eng_type}'
 
         title = f'# title = {title}'
         newdoc_id = f'# newdoc id = hu-{self._identifier}'
@@ -151,6 +149,17 @@ class MMeta:
         return global_metadatas
 
     def _get_metadatas_per_sentence(self, sen):
+        """
+        Example for metadatas per sentence:
+        # newpar id = rendelet_512016_xii_12_mnb-p1
+        # sent_id = rendelet_512016_xii_12_mnb-s1-p1
+        # text = 51/2016. (XII. 12.) MNB rendelete a pénz- és hitelpiaci szervezetek által a jegybanki információs
+        rendszerhez elsődlegesen a Magyar Nemzeti Bank felügyeleti feladatai ellátása érdekében teljesítendő
+        adatszolgáltatási kötelezettségekről.
+
+        newpar id: appears only in laws and regulations and only before sentences which started with a new paragraph
+
+        """
         # from here: get metadatas per sentence
         orig_sent = [line[1] + ' ' if line[9] == '_' else line[1] + '' for line in sen]
         sentence = ''.join(orig_sent)
