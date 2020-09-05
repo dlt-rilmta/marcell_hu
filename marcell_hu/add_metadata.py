@@ -33,7 +33,7 @@ class MMeta:
 
         self._sentence_count = 0
         self._pat_paragraph = re.compile(r'^\d+[.] *§')
-        self._pat_whitespaces = re.compile(r'\W')
+        self._pat_whs_and_puncts = re.compile(r'\W')
         self._doc_type = 'ISMERETLEN'
         self._identifier = ''
         self._paragraph_number = 1
@@ -128,9 +128,9 @@ class MMeta:
 
         splitted_title = title.split()
 
-        self._identifier = self._pat_whitespaces.sub('',
-                                                     f'{self._prefix_dict[splitted_title[-1]]}'
-                                                     f'_{"_".join(splitted_title[:-1]).lower().translate(self._accent_table)}')
+        self._identifier = self._pat_whs_and_puncts.sub('',
+                                                        f'{self._prefix_dict[splitted_title[-1]]}'
+                                                        f'_{"_".join(splitted_title[:-1]).lower().translate(self._accent_table)}')
 
         # From here: finalize global metadata values
         columns = f'# global.columns = {" ".join(self._header).upper()}'
@@ -151,10 +151,10 @@ class MMeta:
 
         return global_metadatas
 
-    def _get_no_paragraph_infos(self, metadatas_per_sentence, sentence, sent_id):
-        return sent_id
+    def _get_no_paragraph_infos(self, sentence, sent_id):
+        return sent_id, ''
 
-    def _get_real_paragraph_infos(self, metadatas_per_sentence, sentence, sent_id):
+    def _get_real_paragraph_infos(self, sentence, sent_id):
         par_id = ''
         paragraph = self._pat_paragraph.match(sentence)
 
@@ -166,11 +166,7 @@ class MMeta:
 
         sent_id += f'-p{self._paragraph_number}'
 
-        if par_id != '':
-            par_id = f'# newpar id = {par_id}'
-            metadatas_per_sentence.append([par_id])
-
-        return sent_id
+        return sent_id, par_id
 
     def _get_metadatas_per_sentence(self, sen):
         """
@@ -189,8 +185,12 @@ class MMeta:
         sentence = ''.join(orig_sent)
         metadatas_per_sentence = []
 
-        sent_id = self._get_paragraph_infos(metadatas_per_sentence, sentence,
-                                            f'# sent_id = {self._identifier}-s{self._sentence_count}')
+        sent_id, par_id = self._get_paragraph_infos(sentence,
+                                                    f'# sent_id = {self._identifier}-s{self._sentence_count}')
+
+        if len(par_id) > 0:
+            par_id = f'# newpar id = {par_id}'
+            metadatas_per_sentence.append([par_id])
 
         metadatas_per_sentence.append([sent_id])
         metadatas_per_sentence.append([f'# text = {sentence}'])
