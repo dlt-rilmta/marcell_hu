@@ -48,8 +48,14 @@ em_ner = ('huntag', 'Tagger', 'emNER', ({'cfg_file': cfg_file, 'model_name': mod
           {'source_fields': set(), 'target_fields': [target_field]})
 
 # emCoNLL ##############################################################################################################
-
-em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (), {'source_fields': {'form'}, 'target_fields': []})
+# print_header=False, force_id=False, add_space_after_no=False, extra_columns=None,
+em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (),
+            {'print_header': True,
+             'force_id': True,
+             'add_space_after_no': True,
+             'extra_columns': {'NP-BIO-FIXED': 'MARCELL:NP', 'NER-BIO-FIXED': 'MARCELL:NER'},
+             'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats'},
+             'target_fields': []})
 
 # mCoNLL ##############################################################################################################
 
