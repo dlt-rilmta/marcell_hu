@@ -37,6 +37,7 @@ class MMeta:
         self._doc_type = 'ISMERETLEN'
         self._identifier = ''
         self._paragraph_number = 1
+        self._get_paragraph_infos = self._get_no_paragraph_infos
 
         if source_fields is None:
             source_fields = set()
@@ -113,6 +114,7 @@ class MMeta:
                 # lemmas.append(line[2])
                 if line[2] in self._doc_types_hun_eng.keys():
                     self._doc_type = line[2]
+                    self._get_paragraph_infos = self._get_real_paragraph_infos
                     title += self._doc_type
                     is_title_end = True
                     is_topic = True
@@ -148,6 +150,28 @@ class MMeta:
 
         return global_metadatas
 
+    def _get_no_paragraph_infos(self, metadatas_per_sentence, sentence, sent_id):
+        return sent_id
+
+    def _get_real_paragraph_infos(self, metadatas_per_sentence, sentence, sent_id):
+        if self._doc_type == "törvény" or self._doc_type == "rendelet":
+            par_id = ''
+            paragraph = self._pat_paragraph.match(sentence)
+
+            if paragraph or self._sentence_count == 1:
+                if self._sentence_count > 1:
+                    self._paragraph_number = int(paragraph.group().split(".")[0])
+
+                par_id = f'{self._identifier}-p{self._paragraph_number}'
+
+            sent_id += f'-p{self._paragraph_number}'
+
+            if par_id != '':
+                par_id = f'# newpar id = {par_id}'
+                metadatas_per_sentence.append([par_id])
+
+        return sent_id
+
     def _get_metadatas_per_sentence(self, sen):
         """
         Example for metadatas per sentence:
@@ -164,25 +188,11 @@ class MMeta:
         orig_sent = [line[1] + ' ' if line[9] == '_' else line[1] + '' for line in sen]
         sentence = ''.join(orig_sent)
         sent_id = f'# sent_id = {self._identifier}-s{self._sentence_count}'
-        metadatad_per_sentence = []
+        metadatas_per_sentence = []
 
-        if self._doc_type == "törvény" or self._doc_type == "rendelet":
-            par_id = ''
-            paragraph = self._pat_paragraph.match(sentence)
+        sent_id = self._get_paragraph_infos(metadatas_per_sentence, sentence, sent_id)
 
-            if paragraph or self._sentence_count == 1:
-                if self._sentence_count > 1:
-                    self._paragraph_number = int(paragraph.group().split(".")[0])
+        metadatas_per_sentence.append([sent_id])
+        metadatas_per_sentence.append([f'# text = {sentence}'])
 
-                par_id = f'{self._identifier}-p{self._paragraph_number}'
-
-            sent_id += f'-p{self._paragraph_number}'
-
-            if par_id != '':
-                par_id = f'# newpar id = {par_id}'
-                metadatad_per_sentence.append([par_id])
-
-        metadatad_per_sentence.append([sent_id])
-        metadatad_per_sentence.append([f'# text = {sentence}'])
-
-        return metadatad_per_sentence
+        return metadatas_per_sentence
