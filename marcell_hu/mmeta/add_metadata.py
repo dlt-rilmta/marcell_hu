@@ -37,7 +37,8 @@ class MMeta:
         self._header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head', 'deprel', 'deps',
                         'misc', 'marcell:ne', 'marcell:np', 'marcell:iate', 'marcell:eurovoc']
 
-        self._accent_table = str.maketrans({"á": "a", "ü": "u", "ó": "o", "ö": "o", "ő": "o", "ú": "u", "é": "e", "ű": "u", "í": "i"})
+        self._accent_table = str.maketrans(
+            {"á": "a", "ü": "u", "ó": "o", "ö": "o", "ő": "o", "ú": "u", "é": "e", "ű": "u", "í": "i"})
 
         self._sentence_count = 0
         self._pat_whs_and_puncts = re.compile(r'\W')
@@ -140,7 +141,7 @@ class MMeta:
 
         # From here: finalize global metadata values
         columns = f'# global.columns = {" ".join(self._header).upper()}'
-        eng_type = f'# entype = {self._doc_types_hun_eng[self._doc_type]}' # self._doc_types_hun_eng.get(self._doc_type, 'UNKNOWN')
+        eng_type = f'# entype = {self._doc_types_hun_eng[self._doc_type]}'  # self._doc_types_hun_eng.get(self._doc_type, 'UNKNOWN')
         hun_type = f'# type = {self._doc_type}'
 
         issuer = title.split()[-2] if self._doc_type != 'törvény' else 'parlament'
@@ -157,10 +158,14 @@ class MMeta:
 
         return global_metadatas
 
-    def _get_no_paragraph_infos(self, sentence, sent_id):
-        return sent_id, ''
+    def _get_no_paragraph_infos(self, metadatas_per_sentence, sentence, sent_id):
+        return sent_id
 
-    def _get_real_paragraph_infos(self, sentence, sent_id):
+    def _get_real_paragraph_infos(self, metadatas_per_sentence, sentence, sent_id):
+        """
+        This function appends paragraph metadata informations to input metadata list (metadatas_per_sentence)
+        and also returns sentence id (sent_id) modified by paragraph number
+        """
         par_id = ''
         paragraph = self._pat_paragraph.match(sentence)
 
@@ -172,7 +177,11 @@ class MMeta:
 
         sent_id += f'-p{self._paragraph_number}'
 
-        return sent_id, par_id
+        if len(par_id) > 0:
+            par_id = f'# newpar id = {par_id}'
+            metadatas_per_sentence.append([par_id])
+
+        return sent_id
 
     def _get_metadatas_per_sentence(self, sen):
         """
@@ -191,12 +200,10 @@ class MMeta:
         sentence = ''.join(orig_sent)
         metadatas_per_sentence = []
 
-        sent_id, par_id = self._get_paragraph_infos(sentence,
-                                                    f'# sent_id = {self._identifier}-s{self._sentence_count}')
-
-        if len(par_id) > 0:
-            par_id = f'# newpar id = {par_id}'
-            metadatas_per_sentence.append([par_id])
+        # if to be found paragraphs: appends paragraph infos to metadatas_per_sentence and returns modified sent_id
+        sent_id = self._get_paragraph_infos(metadatas_per_sentence,
+                                            sentence,
+                                            f'# sent_id = {self._identifier}-s{self._sentence_count}')
 
         metadatas_per_sentence.append([sent_id])
         metadatas_per_sentence.append([f'# text = {sentence}'])
