@@ -88,32 +88,30 @@ class MMeta:
         # issuer = Korm.
         # topic = garanciához kapcsolódó állami készfizető kezesség nyújtásáról
         """
-
         orig_sent = []
         # lemmas = []
         is_topic = False
         is_title_end = False
         title = ''
         topic = ''
-        date = sen[0][2]
+        date = sen[0][0]
 
         for i, line in enumerate(sen):
             # Iterating over sentence to get the topic, title, documentum type, lemmas,
             # for and the original sentence as text
-
-            space = " " if line[9] == "_" else ""
+            space = " " if line[1] == '" "' else ""
             orig_sent.append(line[1] + space)
 
             if is_topic:
                 if line[1].replace("*", "") != ".":
-                    topic += line[1] + space
+                    topic += line[0] + space
                 else:
                     is_topic = False
 
             elif not is_title_end:
                 # lemmas.append(line[2])
-                if line[2] in self._doc_types_hun_eng.keys():
-                    self._doc_type = line[2]
+                if line[3] in self._doc_types_hun_eng.keys():
+                    self._doc_type = line[3]
                     if self._doc_type == "törvény" or self._doc_type == "rendelet":
                         self._get_paragraph_infos = self._get_real_paragraph_infos
                     title += self._doc_type
@@ -124,7 +122,7 @@ class MMeta:
                 elif i == 9:
                     is_title_end = True
                 else:
-                    title += line[1] + space
+                    title += line[0] + space
 
         splitted_title = title.split()
 
@@ -181,7 +179,7 @@ class MMeta:
 
         """
         # from here: get metadatas per sentence
-        orig_sent = [line[1] + ' ' if line[9] == '_' else line[1] + '' for line in sen]
+        orig_sent = [line[0] + ' ' if line[1] == '" "' else line[0] for line in sen]
         sentence = ''.join(orig_sent)
         metadatas_per_sentence = []
 

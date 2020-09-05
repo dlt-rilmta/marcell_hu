@@ -50,19 +50,12 @@ em_ner = ('huntag', 'Tagger', 'emNER', ({'cfg_file': cfg_file, 'model_name': mod
 # emCoNLL ##############################################################################################################
 # print_header=False, force_id=False, add_space_after_no=False, extra_columns=None,
 em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (),
-            {'print_header': True,
-             'force_id': True,
+            {'force_id': True,
              'add_space_after_no': True,
-             'extra_columns': {'NP-BIO-FIXED': 'MARCELL:NP', 'NER-BIO-FIXED': 'MARCELL:NER'},
+             'extra_columns': {'NP-BIO-FIXED': 'MARCELL:NP', 'NER-BIO-FIXED': 'MARCELL:NER',
+                               'marcell:iate': 'marcell:iate', 'marcell:eurovoc': 'marcell:eurovoc'},
              'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats'},
              'target_fields': []})
-
-# mCoNLL ##############################################################################################################
-
-m_conll = ('marcell_hu', 'MCoNLL', 'CoNLL-U converter for MARCELL', (),
-           {'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats',
-                              'NP-BIO-FIXED', 'NER-BIO-FIXED'},  # set(),
-            'target_fields': []})
 
 # mMeta ##############################################################################################################
 
@@ -73,13 +66,15 @@ m_meta = ('marcell_hu', 'MMeta', 'Add metadata', (), {'source_fields': {'form', 
 
 term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'iate.tsv')
 em_term_iate = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
-                (term_list,), {'source_fields': {'form', 'lemma'},
+                (term_list,), {'termid_separator': ';',
+                               'source_fields': {'form', 'lemma'},
                                'target_fields': ['marcell:iate']})
 
 # emTerm for eurovoc ##################################################################################################
 term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'eurovoc.tsv')
 em_term_eurovoc = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
-                   (term_list,), {'source_fields': {'form', 'lemma'},
+                   (term_list,), {'termid_separator': ';',
+                                  'source_fields': {'form', 'lemma'},
                                   'target_fields': ['marcell:eurovoc']})
 
 # emIOBUtils ###########################################################################################################
@@ -90,10 +85,6 @@ emiobutils_maxnp = ('emiobutils', 'EmIOBUtils', 'IOB format converter and fixer 
 emiobutils_ner = ('emiobutils', 'EmIOBUtils', 'IOB format converter and fixer for NER', (),
                   {'out_style': 'IOB2', 'source_fields': {'NER-BIO'}, 'target_fields': ['NER-BIO-FIXED']})
 
-# mCorrect #########################################################################################################
-m_correct = ('marcell_hu', 'MCorrect', 'Last module of MARCELL modules, which finalizes the output', (),
-             {'source_fields': {'marcell:iate', 'marcell:eurovoc'},
-              'target_fields': []})
 
 # Map module personalities to firendly names...
 # The first name is the default. The order is the display order of the modules
@@ -105,15 +96,13 @@ tools = [(em_token, ('tok', 'emToken')),
          (em_morph2ud, ('conv-morph', 'emmorph2ud')),
          (em_conll, ('conll', 'emCoNLL')),
          (em_dummy, ('dummy-tagger', 'emDummy')),
-         (m_conll, ('mconll', 'mCoNLL')),
          (m_meta, ('mmeta', 'mMeta')),
          (em_term_iate, ('term-iate', 'emTerm',)),
          (em_term_eurovoc, ('term-eurovoc', 'emTerm',)),
          (emiobutils_maxnp, ('fix-np', 'fix-chunk', 'emIOBUtils-NP')),
-         (emiobutils_ner, ('fix-ner', 'fix-ner', 'emIOBUtils-NER')),
-         (m_correct, ('mcorrect', 'mCorrect'))]
+         (emiobutils_ner, ('fix-ner', 'fix-ner', 'emIOBUtils-NER'))]
 
 # cat input.txt | ./main.py tok,morph,pos,conv-morph,dep -> cat input.txt | ./main.py tok-dep
 presets = {'annotate': ('Full pipeline', ['tok', 'morph', 'pos', 'chunk', 'ner', 'conv-morph',
-                                          'mconll', 'mmeta', 'term-iate', 'term-eurovoc', 'mcorrect',
+                                          'mmeta', 'term-iate', 'term-eurovoc',
                                           'dummy-tagger', 'conll'])}  # TODO értelem szerint!
