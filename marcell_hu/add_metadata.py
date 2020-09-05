@@ -187,10 +187,10 @@ class MMeta:
         # from here: get metadatas per sentence
         orig_sent = [line[1] + ' ' if line[9] == '_' else line[1] + '' for line in sen]
         sentence = ''.join(orig_sent)
-        sent_id = f'# sent_id = {self._identifier}-s{self._sentence_count}'
         metadatas_per_sentence = []
 
-        sent_id = self._get_paragraph_infos(metadatas_per_sentence, sentence, sent_id)
+        sent_id = self._get_paragraph_infos(metadatas_per_sentence, sentence,
+                                            f'# sent_id = {self._identifier}-s{self._sentence_count}')
 
         metadatas_per_sentence.append([sent_id])
         metadatas_per_sentence.append([f'# text = {sentence}'])
