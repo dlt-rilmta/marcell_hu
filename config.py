@@ -52,8 +52,8 @@ em_ner = ('huntag', 'Tagger', 'emNER', ({'cfg_file': cfg_file, 'model_name': mod
 em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (),
             {'force_id': True,
              'add_space_after_no': True,
-             'extra_columns': {'NP-BIO-FIXED': 'MARCELL:NP', 'NER-BIO-FIXED': 'MARCELL:NER',
-                               'marcell:iate': 'marcell:iate', 'marcell:eurovoc': 'marcell:eurovoc'},
+             'extra_columns': {'NER-BIO-FIXED': 'MARCELL:NER', 'NP-BIO-FIXED': 'MARCELL:NP',
+                               'marcell:iate': 'MARCELL:IATE', 'marcell:eurovoc': 'MARCELL:EUROVOC'},
              'source_fields': {'form', 'wsafter', 'anas', 'lemma', 'xpostag', 'upostag', 'feats'},
              'target_fields': []})
 

@@ -22,22 +22,30 @@ class MMeta:
                                    "tájékoztató": "notification",
                                    "ISMERETLEN": "UNDEFINED"}
 
+        self._prefix_dict = {"határozat": "hat",
+                             "rendelet": "rnd",
+                             "törvény": "trv",
+                             "végzés": "veg",
+                             "közlemény": "koz",
+                             "nyilatkozat": "nyil",
+                             "utasítás": "ut",
+                             "állásfoglalás": "all",
+                             "tájékoztató": "taj",
+                             "intézkedés": "int",
+                             "parancs": "par"}
+
         self._header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head', 'deprel', 'deps',
                         'misc', 'marcell:ne', 'marcell:np', 'marcell:iate', 'marcell:eurovoc']
 
         self._accent_table = str.maketrans({"á": "a", "ü": "u", "ó": "o", "ö": "o", "ő": "o", "ú": "u", "é": "e", "ű": "u", "í": "i"})
 
-        self._prefix_dict = {"határozat": "hat", "rendelet": "rnd", "törvény": "trv", "végzés": "veg",
-                             "közlemény": "koz", "nyilatkozat": "nyil", "utasítás": "ut", "állásfoglalás": "all",
-                             "tájékoztató": "taj", "intézkedés": "int", "parancs": "par"}
-
         self._sentence_count = 0
-        self._pat_paragraph = re.compile(r'^\d+[.] *§')
         self._pat_whs_and_puncts = re.compile(r'\W')
-        self._doc_type = 'ISMERETLEN'
-        self._identifier = ''
+        self._pat_paragraph = re.compile(r'^\d+[.] *§')
         self._paragraph_number = 1
         self._get_paragraph_infos = self._get_no_paragraph_infos
+        self._doc_type = 'ISMERETLEN'
+        self._identifier = ''
 
         if source_fields is None:
             source_fields = set()
@@ -103,7 +111,7 @@ class MMeta:
             orig_sent.append(line[1] + space)
 
             if is_topic:
-                if line[1].replace("*", "") != ".":
+                if line[0].replace("*", "") != ".":
                     topic += line[0] + space
                 else:
                     is_topic = False
@@ -179,7 +187,7 @@ class MMeta:
 
         """
         # from here: get metadatas per sentence
-        orig_sent = [line[0] + ' ' if line[1] == '" "' else line[0] for line in sen]
+        orig_sent = [line[0] + ' ' if line[1] != '""' else line[0] for line in sen]
         sentence = ''.join(orig_sent)
         metadatas_per_sentence = []
 
