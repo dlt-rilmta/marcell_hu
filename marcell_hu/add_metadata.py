@@ -25,7 +25,11 @@ class MMeta:
         self._header = ['id', 'form', 'lemma', 'upos', 'xpos', 'feats', 'head', 'deprel', 'deps',
                         'misc', 'marcell:ne', 'marcell:np', 'marcell:iate', 'marcell:eurovoc']
 
-        self._accent_dict = {"á": "a", "ü": "u", "ó": "o", "ö": "o", "ő": "o", "ú": "u", "é": "e", "ű": "u", "í": "i"}
+        self._accent_table = str.maketrans({"á": "a", "ü": "u", "ó": "o", "ö": "o", "ő": "o", "ú": "u", "é": "e", "ű": "u", "í": "i"})
+
+        self._prefix_dict = {"határozat": "hat", "rendelet": "rnd", "törvény": "trv", "végzés": "veg",
+                             "közlemény": "koz", "nyilatkozat": "nyil", "utasítás": "ut", "állásfoglalás": "all",
+                             "tájékoztató": "taj", "intézkedés": "int", "parancs": "par"}
 
         self._sentence_count = 0
         self._pat_paragraph = re.compile(r'^\d+[.] *§')
@@ -87,44 +91,42 @@ class MMeta:
         orig_sent = []
         # lemmas = []
         is_topic = False
-        title_end = False
+        is_title_end = False
         title = ''
         topic = ''
-        date = ''
+        date = sen[0][2]
 
         for i, line in enumerate(sen):
             # Iterating over sentence to get the topic, title, documentum type, lemmas,
             # for and the original sentence as text
 
-            if i == 0:
-                date = line[2]
-
             space = " " if line[9] == "_" else ""
             orig_sent.append(line[1] + space)
 
-            if is_topic is True:
+            if is_topic:
                 if line[1].replace("*", "") != ".":
                     topic += line[1] + space
                 else:
                     is_topic = False
 
-            elif title_end is False:
+            elif not is_title_end:
                 # lemmas.append(line[2])
                 if line[2] in self._doc_types_hun_eng.keys():
                     self._doc_type = line[2]
                     title += self._doc_type
-                    title_end = True
+                    is_title_end = True
                     is_topic = True
 
                 # átlagos rövid cím legfelső határa: ha nincs törvénytípus, így nem egy hosszú cím lesz az azonosító
                 elif i == 9:
-                    title_end = True
+                    is_title_end = True
                 else:
                     title += line[1] + space
 
         splitted_title = title.split()
+
         self._identifier = self._pat_whitespaces.sub('', '_'.join(splitted_title[-1:] + splitted_title[:-1])).lower(). \
-            translate(str.maketrans(self._accent_dict))
+            translate(self._accent_table)
 
         # From here: finalize global metadata values
         columns = f'# global.columns = {" ".join(self._header).upper()}'
@@ -143,18 +145,14 @@ class MMeta:
 
         global_metadatas = [[columns], [newdoc_id], [date], [title], [hun_type], [eng_type], [issuer]]
 
-        if topic != '':
+        if len(topic) > 0:
             global_metadatas.append([f'# topic = {topic}'])
 
         return global_metadatas
 
     def _get_metadatas_per_sentence(self, sen):
-        orig_sent = []
-        for line in sen:
-            space = " " if line[9] == "_" else ""
-            orig_sent.append(line[1] + space)
-
         # from here: get metadatas per sentence
+        orig_sent = [line[1] + ' ' if line[9] == '_' else line[1] + '' for line in sen]
         sentence = ''.join(orig_sent)
         sent_id = f'# sent_id = {self._identifier}-s{self._sentence_count}'
         par_id = ''
@@ -163,16 +161,13 @@ class MMeta:
         if self._doc_type == "törvény" or self._doc_type == "rendelet":
             paragraph = self._pat_paragraph.match(sentence)
 
-            if self._sentence_count > 1 and paragraph:
-                self._paragraph_number = int(paragraph.group().split(".")[0])
+            if paragraph or self._sentence_count == 1:
+                if self._sentence_count > 1:
+                    self._paragraph_number = int(paragraph.group().split(".")[0])
 
-                if self._paragraph_number != 1:
-                    par_id = f'{self._identifier}-p{self._paragraph_number}'
-
-            elif self._sentence_count == 1:
                 par_id = f'{self._identifier}-p{self._paragraph_number}'
 
-            sent_id = f'# sent_id = {self._identifier}-s{self._sentence_count}-p{self._paragraph_number}'
+            sent_id += f'-p{self._paragraph_number}'
 
         if par_id != '':
             par_id = f'# newpar id = {par_id}'
