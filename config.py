@@ -59,19 +59,19 @@ em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (),
 
 # mMeta ##############################################################################################################
 
-m_meta = ('marcell_hu', 'MMeta', 'Add metadata', (), {'source_fields': {'form', 'lemma'},
-                                                      'target_fields': []})
+m_meta = ('marcell_hu.mmeta', 'MMeta', 'Add metadata', (), {'source_fields': {'form', 'lemma'},
+                                                               'target_fields': []})
 
 # emTerm for iate #####################################################################################################
 
-term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'iate.tsv')
+term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm_term_lists', 'iate.tsv')
 em_term_iate = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
                 (term_list,), {'termid_separator': ';',
                                'source_fields': {'form', 'lemma'},
                                'target_fields': ['marcell:iate']})
 
 # emTerm for eurovoc ##################################################################################################
-term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm', 'eurovoc.tsv')
+term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm_term_lists', 'eurovoc.tsv')
 em_term_eurovoc = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
                    (term_list,), {'termid_separator': ';',
                                   'source_fields': {'form', 'lemma'},
@@ -84,7 +84,6 @@ emiobutils_maxnp = ('emiobutils', 'EmIOBUtils', 'IOB format converter and fixer 
 
 emiobutils_ner = ('emiobutils', 'EmIOBUtils', 'IOB format converter and fixer for NER', (),
                   {'out_style': 'IOB2', 'source_fields': {'NER-BIO'}, 'target_fields': ['NER-BIO-FIXED']})
-
 
 # Map module personalities to firendly names...
 # The first name is the default. The order is the display order of the modules
