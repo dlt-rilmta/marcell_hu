@@ -114,7 +114,8 @@ class MMeta:
                 # lemmas.append(line[2])
                 if line[2] in self._doc_types_hun_eng.keys():
                     self._doc_type = line[2]
-                    self._get_paragraph_infos = self._get_real_paragraph_infos
+                    if self._doc_type == "törvény" or self._doc_type == "rendelet":
+                        self._get_paragraph_infos = self._get_real_paragraph_infos
                     title += self._doc_type
                     is_title_end = True
                     is_topic = True
@@ -154,21 +155,20 @@ class MMeta:
         return sent_id
 
     def _get_real_paragraph_infos(self, metadatas_per_sentence, sentence, sent_id):
-        if self._doc_type == "törvény" or self._doc_type == "rendelet":
-            par_id = ''
-            paragraph = self._pat_paragraph.match(sentence)
+        par_id = ''
+        paragraph = self._pat_paragraph.match(sentence)
 
-            if paragraph or self._sentence_count == 1:
-                if self._sentence_count > 1:
-                    self._paragraph_number = int(paragraph.group().split(".")[0])
+        if paragraph or self._sentence_count == 1:
+            if self._sentence_count > 1:
+                self._paragraph_number = int(paragraph.group().split(".")[0])
 
-                par_id = f'{self._identifier}-p{self._paragraph_number}'
+            par_id = f'{self._identifier}-p{self._paragraph_number}'
 
-            sent_id += f'-p{self._paragraph_number}'
+        sent_id += f'-p{self._paragraph_number}'
 
-            if par_id != '':
-                par_id = f'# newpar id = {par_id}'
-                metadatas_per_sentence.append([par_id])
+        if par_id != '':
+            par_id = f'# newpar id = {par_id}'
+            metadatas_per_sentence.append([par_id])
 
         return sent_id
 
