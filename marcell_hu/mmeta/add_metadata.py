@@ -59,9 +59,9 @@ class MMeta:
 
     def process_sentence(self, sen, field_names):
         """
-        Reorder the needed fields and put _ when a mandatory field missing (eg. not created yet)
+        Collect and adds global and per-sentence metadata to input.
         :param sen: The sentence splitted to tokens and fields
-        :param field_names: The name of the fields mapped to the column indices
+        :param field_names: The name of the fields mapped to the column indices (not used in this class)
         :return: A generator yields the output line-by-line
         """
         self._sentence_count += 1
@@ -89,7 +89,7 @@ class MMeta:
         """
         Example output global metadata
         # global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC MARCELL:NE MARCELL:NP MARCELL:IATE MARCELL:EUROVOC
-        # newdoc id = hu-hat_mk18188_16252018xi29korm
+        # newdoc id = hu-hat_16252018xi29korm
         # date = 2018
         # title = 1625/2018. (XI. 29.) Korm. határozat
         # type = határozat

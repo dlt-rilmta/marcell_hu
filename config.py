@@ -3,13 +3,6 @@
 
 import os
 
-# DummyTagger (EXAMPLE) ################################################################################################
-
-# Setup the tuple: module name (ending with the filename the class defined in),
-# class, friendly name, args (tuple), kwargs (dict)
-em_dummy = ('marcell_hu', 'EmDummy', 'EXAMPLE (The friendly name of DummyTagger used in REST API form)',
-            ('Params', 'goes', 'here'),
-            {'source_fields': {'form'}, 'target_fields': ['star']})
 
 # emToken ##############################################################################################################
 
@@ -48,7 +41,7 @@ em_ner = ('huntag', 'Tagger', 'emNER', ({'cfg_file': cfg_file, 'model_name': mod
           {'source_fields': set(), 'target_fields': [target_field]})
 
 # emCoNLL ##############################################################################################################
-# print_header=False, force_id=False, add_space_after_no=False, extra_columns=None,
+
 em_conll = ('emconll', 'EmCoNLL', 'CoNLL-U converter', (),
             {'force_id': True,
              'add_space_after_no': True,
@@ -71,6 +64,7 @@ em_term_iate = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from
                                'target_fields': ['marcell:iate']})
 
 # emTerm for eurovoc ##################################################################################################
+
 term_list = os.path.join(os.path.dirname(__file__), 'marcell_hu', 'emterm_term_lists', 'eurovoc.tsv')
 em_term_eurovoc = ('emterm', 'EmTerm', 'Mark multiword terminology expressions from fixed list',
                    (term_list,), {'termid_separator': ';',
@@ -93,15 +87,13 @@ tools = [(em_token, ('tok', 'emToken')),
          (em_chunk, ('chunk', 'emChunk')),
          (em_ner, ('ner', 'emNER')),
          (em_morph2ud, ('conv-morph', 'emmorph2ud')),
-         (em_conll, ('conll', 'emCoNLL')),
-         (em_dummy, ('dummy-tagger', 'emDummy')),
+         (emiobutils_maxnp, ('fix-np', 'fix-chunk', 'emIOBUtils-NP')),
+         (emiobutils_ner, ('fix-ner', 'fix-ner', 'emIOBUtils-NER')),
          (m_meta, ('mmeta', 'mMeta')),
          (em_term_iate, ('term-iate', 'emTerm',)),
          (em_term_eurovoc, ('term-eurovoc', 'emTerm',)),
-         (emiobutils_maxnp, ('fix-np', 'fix-chunk', 'emIOBUtils-NP')),
-         (emiobutils_ner, ('fix-ner', 'fix-ner', 'emIOBUtils-NER'))]
+         (em_conll, ('conll', 'emCoNLL'))]
 
 # cat input.txt | ./main.py tok,morph,pos,conv-morph,dep -> cat input.txt | ./main.py tok-dep
 presets = {'annotate': ('Full pipeline', ['tok', 'morph', 'pos', 'chunk', 'ner', 'conv-morph',
-                                          'mmeta', 'term-iate', 'term-eurovoc',
-                                          'dummy-tagger', 'conll'])}  # TODO értelem szerint!
+                                          'fix-np', 'fix-ner', 'mmeta', 'term-iate', 'term-eurovoc', 'conll'])}
