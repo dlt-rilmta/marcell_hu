@@ -1,0 +1,1011 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC MARCELL:NE MARCELL:NP MARCELL:IATE MARCELL:EUROVOC
+# newdoc id = hu-veg_892007_xi_8_ab
+# date = 2007
+# title = 89/2007. (XI. 8.) AB végzés
+# type = végzés
+# entype = judgment
+# issuer = AB
+# sent_id = veg_892007_xi_8_ab-s1
+# text = 89/2007. (XI. 8.) AB végzése.
+1	89/2007.	89/2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+3	XI.	XI	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+4	8.	8	ADJ	[/Num|Digit][_Ord/Adj][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	SpaceAfter=No	O	I-NP	_	_
+5	)	)	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+6	AB	AB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	végzése	végzés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	1:3548733-1221;3577647-1011, 1221	_
+8	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s2
+# text = Az Alkotmánybíróság az Országos Választási Bizottságnak országos népszavazás kitűzésére irányuló kezdeményezés aláírásgyűjtő íve mintapéldányának hitelesítése tárgyában hozott határozata ellen benyújtott kifogás alapján meghozta a következő végzést: Az Alkotmánybíróság az Országos Választási Bizottság 272/2007. (VII. 31.) OVB határozata ellen benyújtott kifogást érdemi vizsgálat nélkül visszautasítja.
+1	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	1:321349-12, 1206;3545269-1226	1:5692
+3	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+4	Országos	országos	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+5	Választási	választási	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+6	Bizottságnak	bizottság	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+7	országos	országos	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+8	népszavazás	népszavazás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	2:1414900-04, 12	2:2966
+9	kitűzésére	kitűzés	NOUN	[/N][Poss.3Sg][Subl]	Case=Sub|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	3:45100-4811	_
+10	irányuló	irányuló	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+11	kezdeményezés	kezdeményezés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+12	aláírásgyűjtő	aláírásgyűjtő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+13	íve	ív	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+14	mintapéldányának	mintapéldány	NOUN	[/N][Poss.3Sg][Dat]	Case=Dat|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	4:3535760-2841	_
+15	hitelesítése	hitelesítés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	O	5:905510-0806, 12;1484678-3226, 3236	_
+16	tárgyában	tárgy	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	O	6:2150153-12	_
+17	hozott	hozott	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+18	határozata	határozat	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	7:783584-1011;1080835-1011, 2011	3:348
+19	ellen	ellen	ADP	[/Post]	_	_	_	_	_	O	I-NP	_	_
+20	benyújtott	benyújtott	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+21	kifogás	kifogás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	8:3577565-1011, 1221	_
+22	alapján	alap	NOUN	[/N][Poss.3Sg][Supe]	Case=Sup|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+23	meghozta	meghoz	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+24	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+25	következő	következő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+26	végzést	végzés	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	9:3548733-1221;3577647-1011, 1221	_
+27	:	:	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+28	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+29	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	10:321349-12, 1206;3545269-1226	4:5692
+30	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+31	Országos	országos	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+32	Választási	választási	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+33	Bizottság	bizottság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+34	272/2007.	272/2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	O	_	_
+35	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+36	VII.	VII	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	O	_	_
+37	31.	31	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	SpaceAfter=No	O	O	_	_
+38	)	)	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+39	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+40	határozata	határozat	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	O	11:783584-1011;1080835-1011, 2011	5:348
+41	ellen	ellen	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+42	benyújtott	benyújtott	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	_	_
+43	kifogást	kifogás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	O	12:3577565-1011, 1221	_
+44	érdemi	érdemi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	13:3577563-1011, 1221	_
+45	vizsgálat	vizsgálat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	13;14:813116-2841;2149542-1021, 4026, 5606	6:867
+46	nélkül	nélkül	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+47	visszautasítja	visszautasít	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+48	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s3
+# text = Az Alkotmánybíróság ezt a végzését a Magyar Közlönyben közzéteszi.
+1	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	1:321349-12, 1206;3545269-1226	1:5692
+3	ezt	ez	PRON	[/Det|Pro][Acc]	Case=Acc|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+4	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	I-NP	_	_
+5	végzését	végzés	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	2:3548733-1221;3577647-1011, 1221	_
+6	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+7	Magyar	Magyar	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+8	Közlönyben	közlöny	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+9	közzéteszi	közzétesz	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	3:3519508-4026	_
+10	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s4
+# text = INDOKOLÁS I. Az Országos Választási Bizottság (a továbbiakban: OVB) 2007. július 31-i ülésén megtagadta a magánszemély kezdeményező huszonegy kérdésben országos népszavazás kezdeményezésére benyújtott aláírásgyűjtő íve mintapéldányának hitelesítését.
+1	INDOKOLÁS	indokolás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	1:117913-0426, 1006;771114-1011;1197371-1011;1576137-3236, 3611;3563699-0426, 1006	_
+2	I.	I	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+3	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+4	Országos	országos	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+5	Választási	választási	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+6	Bizottság	bizottság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+7	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+8	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	2:846603-12	_
+9	továbbiakban	további	ADJ	[/Adj][Pl][Ine]	Case=Ine|Degree=Pos|Number=Plur	_	_	_	SpaceAfter=No	O	I-NP	2	_
+10	:	:	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	2	_
+11	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+12	)	)	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+13	2007.	2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+14	július	július	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+15	31-i	31-i	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+16	ülésén	ülés	NOUN	[/N][Poss.3Sg][Supe]	Case=Sup|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	3:797834-1006;2227898-0426, 1006	_
+17	megtagadta	megtagad	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+18	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+19	magánszemély	magánszemély	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	4:195919-12, 2446	_
+20	kezdeményező	kezdeményező	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+21	huszonegy	huszonegy	NUM	[/Num][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	I-NP	_	_
+22	kérdésben	kérdés	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	I-NP	_	_
+23	országos	országos	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+24	népszavazás	népszavazás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	5:1414900-04, 12	1:2966
+25	kezdeményezésére	kezdeményezés	NOUN	[/N][Poss.3Sg][Subl]	Case=Sub|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+26	benyújtott	benyújtott	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+27	aláírásgyűjtő	aláírásgyűjtő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+28	íve	ív	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+29	mintapéldányának	mintapéldány	NOUN	[/N][Poss.3Sg][Dat]	Case=Dat|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	6:3535760-2841	_
+30	hitelesítését	hitelesítés	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	B-NP	7:905510-0806, 12;1484678-3226, 3236	_
+31	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s5
+# text = Az OVB minden kérdés tekintetében külön határozatot hozott, 253–273/2007. (VII. 31.) OVB határozat számok alatt.
+1	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+3	minden	minden	PRON	[/N|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Tot	_	_	_	_	O	B-NP	_	_
+4	kérdés	kérdés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+5	tekintetében	tekintet	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+6	külön	külön	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+7	határozatot	határozat	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	1:783584-1011;1080835-1011, 2011	1:348
+8	hozott	hoz	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+9	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+10	253–273/2007.	253–273/2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+11	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+12	VII.	VII	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	O	_	_
+13	31.	31	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	SpaceAfter=No	O	O	_	_
+14	)	)	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+15	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+16	határozat	határozat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	2:783584-1011;1080835-1011, 2011	2:348
+17	számok	szám	NOUN	[/N][Pl][Nom]	Case=Nom|Number=Plur	_	_	_	_	O	O	_	_
+18	alatt	alatt	ADP	[/Post]	_	_	_	_	SpaceAfter=No	O	O	_	_
+19	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s6
+# text = A 272/2007. (VII. 31.) OVB határozattal elbírált népszavazási kezdeményezés aláírásgyűjtési ívén a következő kérdés szerepelt: „Akarja-e, hogy ön is képviselve legyen, ezért megalakuljon a függetlenek pártja – melynek csak olyan személy lehessen tagja, aki semmilyen pártnak legalább 5 éve nem tagja, támogatást, semmilyen párttól »függetlenként« nem kapott – és legalább 20.000 taglétszámnál ugyanolyan állami támogatásra, valamint a 2010-es parlamenti választásokon indulásra legyen jogosult?
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	272/2007.	272/2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+4	VII.	VII	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+5	31.	31	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	SpaceAfter=No	O	I-NP	_	_
+6	)	)	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+7	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+8	határozattal	határozat	NOUN	[/N][Ins]	Case=Ins|Number=Sing	_	_	_	_	O	I-NP	1:783584-1011;1080835-1011, 2011	1:348
+9	elbírált	elbírált	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+10	népszavazási	népszavazási	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+11	kezdeményezés	kezdeményezés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+12	aláírásgyűjtési	aláírásgyűjtési	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+13	ívén	ív	NOUN	[/N][Poss.3Sg][Supe]	Case=Sup|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+14	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+15	következő	következő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+16	kérdés	kérdés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+17	szerepelt	szerepel	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+18	:	:	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+19	„	„	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+20	Akarja	akar	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+21	-e	-e	ADV	[/QPtcl]	PronType=Int	_	_	_	SpaceAfter=No	O	O	_	_
+22	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+23	hogy	hogy	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+24	ön	ön	PRON	[/N|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Prs	_	_	_	_	O	B-NP	_	_
+25	is	is	ADV	[/Adv]	_	_	_	_	_	O	O	_	_
+26	képviselve	képvisel	ADV	[/V][_AdvPtcp/Adv]	VerbForm=Trans	_	_	_	_	O	O	_	_
+27	legyen	van	VERB	[/V][Sbjv.NDef.3Sg]	Definite=Ind|Mood=Imp|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+28	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+29	ezért	ezért	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+30	megalakuljon	megalakul	VERB	[/V][Sbjv.NDef.3Sg]	Definite=Ind|Mood=Imp|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+31	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+32	függetlenek	független	ADJ	[/Adj][Pl][Nom]	Case=Nom|Degree=Pos|Number=Plur	_	_	_	_	O	I-NP	2:3538495-10, 1006;3551579-3236	_
+33	pártja	párt	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+34	–	–	X	[Hyph:Dash]	_	_	_	_	_	O	O	_	_
+35	melynek	amely	PRON	[/N|Pro|Rel][Dat]	Case=Dat|Number=Sing|Person=3|PronType=Rel	_	_	_	_	O	B-NP	_	_
+36	csak	csak	ADV	[/Adv]	_	_	_	_	_	O	O	_	_
+37	olyan	olyan	PRON	[/Adj|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+38	személy	személy	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+39	lehessen	van	VERB	[/V][_Mod/V][Sbjv.NDef.3Sg]	Definite=Ind|Mood=Imp,Pot|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+40	tagja	tag	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	B-NP	3:2232936-1006	_
+41	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+42	aki	aki	PRON	[/N|Pro|Rel][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Rel	_	_	_	_	O	B-NP	_	_
+43	semmilyen	semmilyen	PRON	[/Adj|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Tot	_	_	_	_	O	B-NP	_	_
+44	pártnak	párt	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	O	I-NP	_	_
+45	legalább	legalább	ADV	[/Adv]	_	_	_	_	_	O	B-NP	_	_
+46	5	5	NUM	[/Num|Digit][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	I-NP	_	_
+47	éve	év	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+48	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	I-NP	_	_
+49	tagja	tag	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	4:2232936-1006	_
+50	,	,	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+51	támogatást	támogatás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	5:2150188-2006, 4031;2213468-2436	_
+52	,	,	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+53	semmilyen	semmilyen	PRON	[/Adj|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Tot	_	_	_	_	O	I-NP	_	_
+54	párttól	párt	NOUN	[/N][Abl]	Case=Abl|Number=Sing	_	_	_	_	O	I-NP	_	_
+55	»	»	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+56	függetlenként	független	ADJ	[/Adj][EssFor:ként]	Case=Ess|Degree=Pos|Number=Sing	_	_	_	SpaceAfter=No	O	B-NP	6:3538495-10, 1006;3551579-3236	_
+57	«	«	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+58	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+59	kapott	kap	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+60	–	–	X	[Hyph:Dash]	_	_	_	_	_	O	O	_	_
+61	és	és	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+62	legalább	legalább	ADV	[/Adv]	_	_	_	_	_	O	B-NP	_	_
+63	20.000	20.000	NUM	[/Num|Digit][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	I-NP	_	_
+64	taglétszámnál	taglétszám	NOUN	[/N][Ade]	Case=Ade|Number=Sing	_	_	_	_	O	I-NP	_	_
+65	ugyanolyan	ugyanolyan	ADJ	[/Adj|Pro][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+66	állami	állami	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	7:772531-10, 1606, 4031	2:889
+67	támogatásra	támogatás	NOUN	[/N][Subl]	Case=Sub|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	7;8:2150188-2006, 4031;2213468-2436	2
+68	,	,	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+69	valamint	valamint	CONJ	[/Cnj]	_	_	_	_	_	O	I-NP	_	_
+70	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	I-NP	_	_
+71	2010-es	2010-es	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+72	parlamenti	parlamenti	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	3:701
+73	választásokon	választás	NOUN	[/N][Pl][Supe]	Case=Sup|Number=Plur	_	_	_	_	O	I-NP	_	3;4:695
+74	indulásra	indulás	NOUN	[/N][Subl]	Case=Sub|Number=Sing	_	_	_	_	O	B-NP	_	_
+75	legyen	van	VERB	[/V][Sbjv.NDef.3Sg]	Definite=Ind|Mood=Imp|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+76	jogosult	jogosult	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	B-NP	9:862078-12, 2021, 6416	_
+77	?	?	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s7
+# text = Tagdíj min.
+1	Tagdíj	tagdíj	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	B-NP	_	_
+2	min	mi	PRON	[/N|Pro|Int][Supe]	Case=Sup|Number=Sing|Person=3|PronType=Prs	_	_	_	SpaceAfter=No	O	I-NP	_	_
+3	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s8
+# text = 1000,-Ft/hó vagy tetszés szerint bármilyen összeg?” Az OVB az aláírásgyűjtő ív hitelesítésének megtagadását azzal indokolta, hogy a kezdeményezés nem felel meg az Alkotmány 28/B.
+1	1000	1000	NUM	[/Num|Digit][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	SpaceAfter=No	O	O	_	_
+2	,-	,-	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+3	Ft/hó	Ft/hó	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+4	vagy	vagy	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+5	tetszés	tetszés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+6	szerint	szerint	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+7	bármilyen	bármilyen	PRON	[/Adj|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Ind	_	_	_	_	O	B-NP	_	_
+8	összeg	összeg	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+9	?	?	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+10	”	”	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+11	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+12	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+13	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+14	aláírásgyűjtő	aláírásgyűjtő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+15	ív	ív	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+16	hitelesítésének	hitelesítés	NOUN	[/N][Poss.3Sg][Dat]	Case=Dat|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	1:905510-0806, 12;1484678-3226, 3236	_
+17	megtagadását	megtagadás	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	B-NP	2:3537672-2806	_
+18	azzal	az	PRON	[/Det|Pro][Ins]	Case=Ins|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	I-NP	_	_
+19	indokolta	indokol	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+20	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+21	hogy	hogy	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+22	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+23	kezdeményezés	kezdeményezés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+24	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+25	felel	felel	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+26	meg	meg	PART	[/Prev]	_	_	_	_	_	O	O	_	_
+27	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+28	Alkotmány	alkotmány	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	3:1130023-10, 12	1:148
+29	28/B	28/B	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+30	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s9
+# text = § (1) bekezdésében foglalt követelménynek, amely szerint országos népszavazás és népi kezdeményezés tárgya az Országgyűlés hatáskörébe tartozó kérdés lehet.
+1	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	B-NP	_	_
+2	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+3	1)	1	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+4	bekezdésében	bekezdés	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	1:144037-1011	_
+5	foglalt	foglalt	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+6	követelménynek	követelmény	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+7	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+8	amely	amely	PRON	[/N|Pro|Rel][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Rel	_	_	_	_	O	O	_	_
+9	szerint	szerint	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+10	országos	országos	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+11	népszavazás	népszavazás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	2:1414900-04, 12	1:2966
+12	és	és	CONJ	[/Cnj]	_	_	_	_	_	O	I-NP	_	_
+13	népi	népi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+14	kezdeményezés	kezdeményezés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+15	tárgya	tárgy	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	3:2150153-12	_
+16	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+17	Országgyűlés	országgyűlés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	4:199372-0421	_
+18	hatáskörébe	hatáskör	NOUN	[/N][Poss.3Sg][Ill]	Case=Ill|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	5:767457-1226	_
+19	tartozó	tartozó	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+20	kérdés	kérdés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+21	lehet	van	VERB	[/V][_Mod/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Pot|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+22	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s10
+# text = Az OVB úgy vélte, hogy a kezdeményezés „semmi olyan elemet nem tartalmaz, amely alapján az Országgyűlés jogalkotói hatáskörét gyakorolva eleget tehetne egy sikeres népszavazásból eredő kötelezettségeinek.” Továbbá a kérdés önellentmondást is tartalmaz a „tagdíj min.
+1	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+3	úgy	úgy	PRON	[/Adv|Pro]	Case=Nom|Number=Sing|Person=3|PronType=Prs	_	_	_	_	O	O	_	_
+4	vélte	vél	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+5	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+6	hogy	hogy	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+7	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+8	kezdeményezés	kezdeményezés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+9	„	„	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+10	semmi	semmi	PRON	[/N|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Tot	_	_	_	_	O	B-NP	_	_
+11	olyan	olyan	PRON	[/Adj|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+12	elemet	elem	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	1:1084486-66	_
+13	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+14	tartalmaz	tartalmaz	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+15	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+16	amely	amely	PRON	[/N|Pro|Rel][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Rel	_	_	_	_	O	B-NP	_	_
+17	alapján	alap	NOUN	[/N][Poss.3Sg][Supe]	Case=Sup|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+18	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+19	Országgyűlés	országgyűlés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	2:199372-0421	_
+20	jogalkotói	jogalkotói	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+21	hatáskörét	hatáskör	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	3:767457-1226	_
+22	gyakorolva	gyakorol	ADV	[/V][_AdvPtcp/Adv]	VerbForm=Trans	_	_	_	_	O	O	_	_
+23	eleget	elég	NUM	[/Num][Acc]	Case=Acc|Number=Sing|NumType=Card	_	_	_	_	O	B-NP	_	_
+24	tehetne	tesz	VERB	[/V][_Mod/V][Cond.NDef.3Sg]	Definite=Ind|Mood=Cnd,Pot|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+25	egy	egy	DET	[/Det|Art.NDef]	Definite=Ind|PronType=Art	_	_	_	_	O	B-NP	_	_
+26	sikeres	sikeres	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+27	népszavazásból	népszavazás	NOUN	[/N][Ela]	Case=Ela|Number=Sing	_	_	_	_	O	I-NP	4:1414900-04, 12	1:2966
+28	eredő	eredő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+29	kötelezettségeinek.	kötelezettség	NOUN	[/N][Pl.Poss.3Sg][Dat][Punct]	Case=Dat|Number=Plur|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	5:3519877-4026	_
+30	”	”	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+31	Továbbá	továbbá	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+32	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+33	kérdés	kérdés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+34	önellentmondást	önellentmondás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	_	_
+35	is	is	ADV	[/Adv]	_	_	_	_	_	O	O	_	_
+36	tartalmaz	tartalmaz	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+37	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+38	„	„	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+39	tagdíj	tagdíj	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+40	min	mi	PRON	[/N|Pro|Int][Supe]	Case=Sup|Number=Sing|Person=3|PronType=Prs	_	_	_	SpaceAfter=No	O	I-NP	_	_
+41	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s11
+# text = 1000,-Ft/hó vagy tetszés szerint bármilyen összeg” kitételben.
+1	1000	1000	NUM	[/Num|Digit][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	SpaceAfter=No	O	O	_	_
+2	,-	,-	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+3	Ft/hó	Ft/hó	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+4	vagy	vagy	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+5	tetszés	tetszés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+6	szerint	szerint	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+7	bármilyen	bármilyen	PRON	[/Adj|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Ind	_	_	_	_	O	B-NP	_	_
+8	összeg	összeg	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+9	”	”	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+10	kitételben	kitétel	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+11	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s12
+# text = A 253–273/2007. (VII. 31.) OVB határozatok közzététele a Magyar Közlöny 2007. augusztus 3-án megjelent 2007. évi 104. számában történt meg.
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	253–273/2007.	253–273/2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+4	VII.	VII	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+5	31.	31	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	SpaceAfter=No	O	I-NP	_	_
+6	)	)	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+7	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+8	határozatok	határozat	NOUN	[/N][Pl][Nom]	Case=Nom|Number=Plur	_	_	_	_	O	I-NP	1:783584-1011;1080835-1011, 2011	1:348
+9	közzététele	közzététel	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	2:748151-4026;2248915-12, 24;3516711-3221;3519509-4026	2:2859
+10	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+11	Magyar	Magyar	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+12	Közlöny	közlöny	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+13	2007.	2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+14	augusztus	augusztus	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+15	3-án	3	NOUN	[/Num|Digit][_OrdDate/N][Supe]	Case=Sup|Number=Sing	_	_	_	_	O	I-NP	_	_
+16	megjelent	megjelent	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+17	2007.	2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+18	évi	évi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	3:3535127-6811	_
+19	104.	104	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+20	számában	szám	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+21	történt	történik	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+22	meg	meg	PART	[/Prev]	_	_	_	_	SpaceAfter=No	O	O	_	_
+23	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s13
+# text = Az Országos Választási Bizottságnak az aláírásgyűjtő ív, illetőleg a konkrét kérdés hitelesítésével kapcsolatos döntése ellen a választási eljárásról szóló 1997. évi C. törvény (a továbbiakban: Ve.) 130. § (1) bekezdése értelmében a határozat közzétételét követő tizenöt napon belül kifogást lehet benyújtani.
+1	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	Országos	országos	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+3	Választási	választási	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+4	Bizottságnak	bizottság	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+5	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+6	aláírásgyűjtő	aláírásgyűjtő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	ív	ív	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+8	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+9	illetőleg	illetőleg	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+10	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	O	_	_
+11	konkrét	konkrét	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	_	_
+12	kérdés	kérdés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+13	hitelesítésével	hitelesítés	NOUN	[/N][Poss.3Sg][Ins]	Case=Ins|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	O	1:905510-0806, 12;1484678-3226, 3236	_
+14	kapcsolatos	kapcsolatos	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	_	_
+15	döntése	döntés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	O	2:1437530-2826, 3236	_
+16	ellen	ellen	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+17	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+18	választási	választási	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+19	eljárásról	eljárás	NOUN	[/N][Del]	Case=Del|Number=Sing	_	_	_	_	O	I-NP	3:3549072-4826;3549073-4826	_
+20	szóló	szóló	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+21	1997.	1997	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+22	évi	évi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	4:3535127-6811	_
+23	C.	C	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+24	törvény	törvény	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	1:1697
+25	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+26	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	O	5:846603-12	_
+27	továbbiakban	további	ADJ	[/Adj][Pl][Ine]	Case=Ine|Degree=Pos|Number=Plur	_	_	_	SpaceAfter=No	O	O	5	_
+28	:	:	PUNCT	[Punct]	_	_	_	_	_	O	O	5	_
+29	Ve.	Ve.	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	B-NP	_	_
+30	)	)	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+31	130.	130	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+32	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+33	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+34	1)	1	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+35	bekezdése	bekezdés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	6:144037-1011	_
+36	értelmében	értelem	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+37	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+38	határozat	határozat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	7:783584-1011;1080835-1011, 2011	2:348
+39	közzétételét	közzététel	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	8:748151-4026;2248915-12, 24;3516711-3221;3519509-4026	3:2859
+40	követő	követő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	9:3566043-3226	_
+41	tizenöt	tizenöt	NUM	[/Num][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	O	_	_
+42	napon	nap	NOUN	[/N][Supe]	Case=Sup|Number=Sing	_	_	_	_	O	O	_	_
+43	belül	belül	ADP	[/Post|(Supe)]	_	_	_	_	_	O	O	_	_
+44	kifogást	kifogás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	B-NP	10:3577565-1011, 1221	_
+45	lehet	van	VERB	[/V][_Mod/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Pot|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+46	benyújtani	benyújt	VERB	[/V][Inf]	VerbForm=Inf|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+47	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s14
+# text = A kezdeményező a hitelesítést megtagadó OVB határozatokkal szemben „óvással élt”, amelyet az Alkotmánybíróság kifogásnak tekintett.
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	kezdeményező	kezdeményező	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+4	hitelesítést	hitelesítés	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	1:905510-0806, 12;1484678-3226, 3236	_
+5	megtagadó	megtagadó	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+6	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	határozatokkal	határozat	NOUN	[/N][Pl][Ins]	Case=Ins|Number=Plur	_	_	_	_	O	O	2:783584-1011;1080835-1011, 2011	1:348
+8	szemben	szemben	ADP	[/Post|(Ins)]	_	_	_	_	_	O	O	_	_
+9	„	„	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+10	óvással	óvás	NOUN	[/N][Ins]	Case=Ins|Number=Sing	_	_	_	_	O	O	_	_
+11	élt	él	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	3:3561278-3606, 52, 6411	_
+12	”	”	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+13	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+14	amelyet	amely	PRON	[/N|Pro|Rel][Acc]	Case=Acc|Number=Sing|Person=3|PronType=Rel	_	_	_	_	O	B-NP	_	_
+15	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+16	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	4:321349-12, 1206;3545269-1226	2:5692
+17	kifogásnak	kifogás	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	O	I-NP	5:3577565-1011, 1221	_
+18	tekintett	tekint	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+19	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s15
+# text = A kifogás 2007. augusztus 15-én, a törvényes határidőn belül érkezett az Alkotmánybírósághoz.
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	kifogás	kifogás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	1:3577565-1011, 1221	_
+3	2007.	2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+4	augusztus	augusztus	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+5	15-én	15-én	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+6	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+7	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	O	_	_
+8	törvényes	törvényes	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	_	_
+9	határidőn	határidő	NOUN	[/N][Supe]	Case=Sup|Number=Sing	_	_	_	_	O	O	2:1474775-2436	_
+10	belül	belül	ADP	[/Post|(Supe)]	_	_	_	_	_	O	O	_	_
+11	érkezett	érkezik	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+12	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+13	Alkotmánybírósághoz	alkotmánybíróság	NOUN	[/N][All]	Case=All|Number=Sing	_	_	_	SpaceAfter=No	B-ORG	I-NP	3:321349-12, 1206;3545269-1226	1:5692
+14	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s16
+# text = A kezdeményező egy beadványban nyújtotta be a kifogást, amely az egyes határozatok tekintetében – három határozat kivételével – külön indokolást nem tartalmaz.
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	kezdeményező	kezdeményező	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	egy	egy	NUM	[/Num][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	I-NP	_	_
+4	beadványban	beadvány	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	I-NP	1:794276-1006, 12	_
+5	nyújtotta	nyújt	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+6	be	be	ADV	[/Prev]	_	_	_	_	_	O	O	_	_
+7	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+8	kifogást	kifogás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	2:3577565-1011, 1221	_
+9	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+10	amely	amely	PRON	[/N|Pro|Rel][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Rel	_	_	_	_	O	B-NP	_	_
+11	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+12	egyes	egyes	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+13	határozatok	határozat	NOUN	[/N][Pl][Nom]	Case=Nom|Number=Plur	_	_	_	_	O	I-NP	3:783584-1011;1080835-1011, 2011	1:348
+14	tekintetében	tekintet	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+15	–	–	X	[Hyph:Dash]	_	_	_	_	_	O	O	_	_
+16	három	három	NUM	[/Num][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	B-NP	_	_
+17	határozat	határozat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	4:783584-1011;1080835-1011, 2011	2:348
+18	kivételével	kivétel	NOUN	[/N][Poss.3Sg][Ins]	Case=Ins|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+19	–	–	X	[Hyph:Dash]	_	_	_	_	_	O	O	_	_
+20	külön	külön	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+21	indokolást	indokolás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	5:117913-0426, 1006;771114-1011;1197371-1011;1576137-3236, 3611;3563699-0426, 1006	_
+22	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+23	tartalmaz	tartalmaz	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+24	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s17
+# text = Tekintettel arra, hogy az indítványozó huszonegy más-más tárgyú népszavazási kezdeményezés aláírásgyűjtő íve hitelesítésének megtagadásáról, külön-külön számon meghozott OVB határozat felülvizsgálatát kéri, ezért az Alkotmánybíróság az egyes határozatok tekintetében a kifogást elkülönítette, és a huszonegy kifogásolt OVB határozat vonatkozásában külön határozatot hoz.
+1	Tekintettel	tekintet	NOUN	[/N][Ins]	Case=Ins|Number=Sing	_	_	_	_	O	B-NP	_	_
+2	arra	az	PRON	[/Det|Pro][Subl]	Case=Sub|Number=Sing|Person=3|PronType=Dem	_	_	_	SpaceAfter=No	O	I-NP	_	_
+3	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+4	hogy	hogy	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+5	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+6	indítványozó	indítványozó	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	huszonegy	huszonegy	NUM	[/Num][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	I-NP	_	_
+8	más-más	más-más	NOUN	[/N|Pro][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+9	tárgyú	tárgyú	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+10	népszavazási	népszavazási	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+11	kezdeményezés	kezdeményezés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+12	aláírásgyűjtő	aláírásgyűjtő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+13	íve	ív	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+14	hitelesítésének	hitelesítés	NOUN	[/N][Poss.3Sg][Dat]	Case=Dat|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	1:905510-0806, 12;1484678-3226, 3236	_
+15	megtagadásáról	megtagadás	NOUN	[/N][Poss.3Sg][Del]	Case=Del|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	B-NP	2:3537672-2806	_
+16	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+17	külön-külön	külön-külön	ADV	[/Adv]	_	_	_	_	_	O	B-NP	_	_
+18	számon	szám	NOUN	[/N][Supe]	Case=Sup|Number=Sing	_	_	_	_	O	I-NP	_	_
+19	meghozott	meghozott	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+20	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+21	határozat	határozat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	3:783584-1011;1080835-1011, 2011	1:348
+22	felülvizsgálatát	felülvizsgálat	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	4:3577741-1011, 1221	_
+23	kéri	kér	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+24	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+25	ezért	ezért	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+26	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+27	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	5:321349-12, 1206;3545269-1226	2:5692
+28	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+29	egyes	egyes	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+30	határozatok	határozat	NOUN	[/N][Pl][Nom]	Case=Nom|Number=Plur	_	_	_	_	O	I-NP	6:783584-1011;1080835-1011, 2011	3:348
+31	tekintetében	tekintet	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+32	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+33	kifogást	kifogás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	7:3577565-1011, 1221	_
+34	elkülönítette	elkülönít	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+35	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+36	és	és	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+37	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+38	huszonegy	huszonegy	NUM	[/Num][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	I-NP	_	_
+39	kifogásolt	kifogásolt	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+40	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+41	határozat	határozat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	8:783584-1011;1080835-1011, 2011	4:348
+42	vonatkozásában	vonatkozás	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+43	külön	külön	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+44	határozatot	határozat	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	9:783584-1011;1080835-1011, 2011	5:348
+45	hoz	hoz	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+46	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s18
+# text = Ebben az eljárásban az Alkotmánybíróság a 272/2007. (VII. 31.) OVB határozat elleni kifogást bírálta el.
+1	Ebben	ez	PRON	[/Det|Pro][Ine]	Case=Ine|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+2	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	I-NP	_	_
+3	eljárásban	eljárás	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	I-NP	1:3549072-4826;3549073-4826	_
+4	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+5	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	2:321349-12, 1206;3545269-1226	1:5692
+6	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+7	272/2007.	272/2007	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+8	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+9	VII.	VII	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+10	31.	31	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	SpaceAfter=No	O	I-NP	_	_
+11	)	)	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+12	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+13	határozat	határozat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	3:783584-1011;1080835-1011, 2011	2:348
+14	elleni	elleni	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+15	kifogást	kifogás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	4:3577565-1011, 1221	_
+16	bírálta	bírál	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+17	el	el	ADV	[/Prev]	_	_	_	_	SpaceAfter=No	O	O	_	_
+18	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s19
+# text = II. Az Alkotmánybíróságnak a jelen ügyben irányadó hatáskörét az Alkotmánybíróságról szóló 1989. évi XXXII. törvény (a továbbiakban: Abtv.) 1. § h) pontjában foglaltaknak megfelelően a Ve.
+1	II.	II	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+3	Alkotmánybíróságnak	alkotmánybíróság	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	B-ORG	I-NP	1:321349-12, 1206;3545269-1226	1:5692
+4	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+5	jelen	jelen	ADJ	[/Adj|Attr][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+6	ügyben	ügy	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	irányadó	irányadó	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+8	hatáskörét	hatáskör	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	2:767457-1226	_
+9	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+10	Alkotmánybíróságról	alkotmánybíróság	NOUN	[/N][Del]	Case=Del|Number=Sing	_	_	_	_	O	I-NP	3:321349-12, 1206;3545269-1226	2:5692
+11	szóló	szóló	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+12	1989.	1989	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+13	évi	évi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	4:3535127-6811	_
+14	XXXII.	XXXII	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+15	törvény	törvény	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	3:1697
+16	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+17	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	O	5:846603-12	_
+18	továbbiakban	további	ADJ	[/Adj][Pl][Ine]	Case=Ine|Degree=Pos|Number=Plur	_	_	_	SpaceAfter=No	O	O	5	_
+19	:	:	PUNCT	[Punct]	_	_	_	_	_	O	O	5	_
+20	Abtv.	Abtv.	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	B-NP	_	_
+21	)	)	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+22	1.	1	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+23	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+24	h)	h	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+25	pontjában	pont	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	6:815964-1011;3573427-1011	_
+26	foglaltaknak	foglalt	ADJ	[/Adj][Pl][Dat]	Case=Dat|Degree=Pos|Number=Plur	_	_	_	_	O	O	_	_
+27	megfelelően	megfelelő	ADJ	[/Adj][_Manner/Adv]	Case=Ess|Degree=Pos|Number=Sing	_	_	_	_	O	O	_	_
+28	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+29	Ve	V	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+30	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s20
+# text = 130. §-a határozza meg.
+1	130.	130	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	§-a	§	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+3	határozza	határoz	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+4	meg	meg	PART	[/Prev]	_	_	_	_	SpaceAfter=No	O	O	_	_
+5	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s21
+# text = „Az Alkotmánybíróságnak a formai és tartalmi követelményeknek megfelelő kifogások alapján lefolytatott eljárása jogorvoslati eljárás.” [25/1999. (VII. 7.) AB határozat, ABH 1999, 251, 256.]
+1	„	„	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+2	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+3	Alkotmánybíróságnak	alkotmánybíróság	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	O	I-NP	1:321349-12, 1206;3545269-1226	1:5692
+4	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+5	formai	formai	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+6	és	és	CONJ	[/Cnj]	_	_	_	_	_	O	I-NP	_	_
+7	tartalmi	tartalmi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+8	követelményeknek	követelmény	NOUN	[/N][Pl][Dat]	Case=Dat|Number=Plur	_	_	_	_	O	I-NP	_	_
+9	megfelelő	megfelelő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+10	kifogások	kifogás	NOUN	[/N][Pl][Nom]	Case=Nom|Number=Plur	_	_	_	_	O	I-NP	2:3577565-1011, 1221	_
+11	alapján	alap	NOUN	[/N][Poss.3Sg][Supe]	Case=Sup|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+12	lefolytatott	lefolytatott	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+13	eljárása	eljárás	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	3:3549072-4826;3549073-4826	_
+14	jogorvoslati	jogorvoslati	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	_	_
+15	eljárás.	eljárás	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	O	4:3549072-4826;3549073-4826	_
+16	”	”	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+17	[	[	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+18	25/1999.	25/1999	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+19	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+20	VII.	VII	ADJ	[/Num|Roman][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+21	7.	7	ADJ	[/Num|Digit][_Ord/Adj][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	SpaceAfter=No	O	I-NP	_	_
+22	)	)	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+23	AB	AB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+24	határozat	határozat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	5:783584-1011;1080835-1011, 2011	2:348
+25	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+26	ABH	ABH	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	B-NP	_	_
+27	1999	1999	NUM	[/Num|Digit][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	SpaceAfter=No	O	B-NP	_	_
+28	,	,	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+29	251	251	NUM	[/Num|Digit][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	SpaceAfter=No	O	I-NP	_	_
+30	,	,	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+31	256.	256	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	SpaceAfter=No	O	I-NP	_	_
+32	]	]	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s22
+# text = Ebben a jogorvoslati eljárásban az Alkotmánybíróság megvizsgálja, hogy az OVB határozata ellen beérkezett kifogás megfelel-e a Ve.
+1	Ebben	ez	PRON	[/Det|Pro][Ine]	Case=Ine|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+2	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+3	jogorvoslati	jogorvoslati	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+4	eljárásban	eljárás	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	I-NP	1:3549072-4826;3549073-4826	_
+5	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+6	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	2:321349-12, 1206;3545269-1226	1:5692
+7	megvizsgálja	megvizsgál	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+8	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+9	hogy	hogy	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+10	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	O	_	_
+11	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+12	határozata	határozat	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	O	3:783584-1011;1080835-1011, 2011	2:348
+13	ellen	ellen	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+14	beérkezett	beérkezett	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+15	kifogás	kifogás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	4:3577565-1011, 1221	_
+16	megfelel	megfelel	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+17	-e	-e	ADV	[/QPtcl]	PronType=Int	_	_	_	_	O	O	_	_
+18	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+19	Ve	V	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+20	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s23
+# text = 77. § (2) bekezdése a)–c) pontjaiban, illetve a Ve.
+1	77.	77	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+4	2)	2	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+5	bekezdése	bekezdés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	1:144037-1011	_
+6	a)–c)	a)–c)	NOUN	[/N]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	pontjaiban	pont	NOUN	[/N][Pl.Poss.3Sg][Ine]	Case=Ine|Number=Plur|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	2:815964-1011;3573427-1011	_
+8	,	,	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+9	illetve	illetve	CONJ	[/Cnj]	_	_	_	_	_	O	I-NP	_	_
+10	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	I-NP	_	_
+11	Ve	V	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+12	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s24
+# text = 130. § (1) bekezdésben foglalt feltételeknek, valamint, hogy az OVB az aláírásgyűjtő ív hitelesítési eljárásában az Alkotmánynak és az irányadó törvényeknek megfelelően járt-e el.
+1	130.	130	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+4	1)	1	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+5	bekezdésben	bekezdés	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	I-NP	1:144037-1011	_
+6	foglalt	foglalt	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	feltételeknek	feltétel	NOUN	[/N][Pl][Dat]	Case=Dat|Number=Plur	_	_	_	SpaceAfter=No	O	I-NP	_	_
+8	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+9	valamint	valamint	CONJ	[/Cnj]	_	_	_	_	SpaceAfter=No	O	O	_	_
+10	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+11	hogy	hogy	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+12	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+13	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+14	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+15	aláírásgyűjtő	aláírásgyűjtő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+16	ív	ív	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+17	hitelesítési	hitelesítési	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+18	eljárásában	eljárás	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	2:3549072-4826;3549073-4826	_
+19	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+20	Alkotmánynak	alkotmány	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	B-ORG	I-NP	3:1130023-10, 12	1:148
+21	és	és	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+22	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	O	_	_
+23	irányadó	irányadó	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	_	_
+24	törvényeknek	törvény	NOUN	[/N][Pl][Dat]	Case=Dat|Number=Plur	_	_	_	_	O	O	_	2:1697
+25	megfelelően	megfelelő	ADJ	[/Adj][_Manner/Adv]	Case=Ess|Degree=Pos|Number=Sing	_	_	_	_	O	O	_	_
+26	járt	jár	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+27	-e	-e	ADV	[/QPtcl]	PronType=Int	_	_	_	_	O	O	_	_
+28	el	el	ADV	[/Prev]	_	_	_	_	SpaceAfter=No	O	O	_	_
+29	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s25
+# text = Az OVB az aláírásgyűjtési ív mintapéldányának hitelesítését azzal az indokolással tagadta meg, hogy a kérdés nem tartozik az Országgyűlés hatáskörébe, továbbá több kérdést foglal magába.
+1	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+3	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+4	aláírásgyűjtési	aláírásgyűjtési	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+5	ív	ív	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+6	mintapéldányának	mintapéldány	NOUN	[/N][Poss.3Sg][Dat]	Case=Dat|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	1:3535760-2841	_
+7	hitelesítését	hitelesítés	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	B-NP	2:905510-0806, 12;1484678-3226, 3236	_
+8	azzal	az	PRON	[/Det|Pro][Ins]	Case=Ins|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+9	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	I-NP	_	_
+10	indokolással	indokolás	NOUN	[/N][Ins]	Case=Ins|Number=Sing	_	_	_	_	O	I-NP	3:117913-0426, 1006;771114-1011;1197371-1011;1576137-3236, 3611;3563699-0426, 1006	_
+11	tagadta	tagad	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+12	meg	meg	PART	[/Prev]	_	_	_	_	SpaceAfter=No	O	O	_	_
+13	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+14	hogy	hogy	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+15	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+16	kérdés	kérdés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+17	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+18	tartozik	tartozik	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+19	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+20	Országgyűlés	országgyűlés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	4:199372-0421	_
+21	hatáskörébe	hatáskör	NOUN	[/N][Poss.3Sg][Ill]	Case=Ill|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	5:767457-1226	_
+22	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+23	továbbá	továbbá	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+24	több	sok	NUM	[/Num][_Comp/Num][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	_	O	B-NP	_	_
+25	kérdést	kérdés	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	_	_
+26	foglal	foglal	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+27	magába	maga	PRON	[/N|Pro][3Sg][Ill]	Case=Ill|Number=Sing|Person=3|Reflex=Yes	_	_	_	SpaceAfter=No	O	B-NP	_	_
+28	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s26
+# text = A benyújtott kifogás semmilyen jogi érvelést, jogszabályi hivatkozást nem tartalmaz.
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	benyújtott	benyújtott	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	kifogás	kifogás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	1:3577565-1011, 1221	_
+4	semmilyen	semmilyen	PRON	[/Adj|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Tot	_	_	_	_	O	B-NP	_	_
+5	jogi	jogi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+6	érvelést	érvelés	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+7	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+8	jogszabályi	jogszabályi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+9	hivatkozást	hivatkozás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	2:897300-3226, 3236	_
+10	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+11	tartalmaz	tartalmaz	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+12	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s27
+# text = A kifogás e határozattal összefüggésbe hozható részében a következő szerepel: „Ha a törvényalkotás hatásköre valamint az Alkotmány módosítása nem az Országgyűlés hatásköre, akkor azt anarchiának hívják, nem parlamentális köztársaságnak!” A Ve.
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	kifogás	kifogás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	1:3577565-1011, 1221	_
+3	e	e	ADV	[/Det|Pro|def]	PronType=Art	_	_	_	_	O	B-NP	_	_
+4	határozattal	határozat	NOUN	[/N][Ins]	Case=Ins|Number=Sing	_	_	_	_	O	I-NP	2:783584-1011;1080835-1011, 2011	1:348
+5	összefüggésbe	összefüggés	NOUN	[/N][Ill]	Case=Ill|Number=Sing	_	_	_	_	O	I-NP	_	_
+6	hozható	hozható	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	részében	rész	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	3:2242068-2006;3522587-6811	_
+8	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+9	következő	következő	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+10	szerepel	szerepel	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+11	:	:	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+12	„	„	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+13	Ha	ha	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+14	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+15	törvényalkotás	törvényalkotás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	2:1589
+16	hatásköre	hatáskör	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	4:767457-1226	_
+17	valamint	valamint	CONJ	[/Cnj]	_	_	_	_	_	O	I-NP	_	_
+18	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	I-NP	_	_
+19	Alkotmány	alkotmány	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	5:1130023-10, 12	3:148
+20	módosítása	módosítás	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	6:796339-0806, 12;3510047-2841;3519173-4026	4:1558
+21	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+22	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+23	Országgyűlés	országgyűlés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	7:199372-0421	_
+24	hatásköre	hatáskör	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	8:767457-1226	_
+25	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+26	akkor	akkor	PRON	[/Adv|Pro]	Case=Nom|Number=Sing|Person=3|PronType=Prs	_	_	_	_	O	O	_	_
+27	azt	az	PRON	[/Det|Pro][Acc]	Case=Acc|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+28	anarchiának	anarchia	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	O	I-NP	_	_
+29	hívják	hív	VERB	[/V][Prs.Def.3Pl]	Definite=Def|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+30	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+31	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+32	parlamentális	parlamentális	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+33	köztársaságnak	köztársaság	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	5:3413
+34	!	!	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+35	”	”	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+36	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+37	Ve	V	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	B-ORG	I-NP	_	_
+38	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s28
+# text = 77. § (2) bekezdése szerint a „kifogásnak tartalmaznia kell a) a jogszabálysértés megjelölését, b) a jogszabálysértés bizonyítékait, c) a kifogás benyújtójának nevét, lakcímét (székhelyét) és – ha a lakcímétől (székhelyétől) eltér – postai értesítési címét.” A Ve.
+1	77.	77	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	O	_	_
+2	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+4	2)	2	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	O	_	_
+5	bekezdése	bekezdés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	O	1:144037-1011	_
+6	szerint	szerint	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+7	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+8	„	„	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+9	kifogásnak	kifogás	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	O	I-NP	2:3577565-1011, 1221	_
+10	tartalmaznia	tartalmaz	VERB	[/V][Inf.3Sg]	Number=Sing|Person=3|Tense=Pres|VerbForm=Inf|Voice=Act	_	_	_	_	O	O	_	_
+11	kell	kell	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+12	a)	a	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+13	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+14	jogszabálysértés	jogszabálysértés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+15	megjelölését	megjelölés	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	3:914250-3236;1449650-3236;3557044-1011	_
+16	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+17	b)	b	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+18	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+19	jogszabálysértés	jogszabálysértés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+20	bizonyítékait	bizonyíték	NOUN	[/N][Pl.Poss.3Sg][Acc]	Case=Acc|Number=Plur|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	4:755096-12, 1221;914631-12, 3226	1:5809
+21	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+22	c)	c	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	_	O	O	_	_
+23	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+24	kifogás	kifogás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	5:3577565-1011, 1221	_
+25	benyújtójának	benyújtó	ADJ	[/Adj][Poss.3Sg][Dat]	Case=Dat|Degree=Pos|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+26	nevét	név	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	_	_
+27	,	,	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+28	lakcímét	lakcím	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+29	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+30	székhelyét	székhely	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	6:793082-12, 2416, 4006	2:4158
+31	)	)	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+32	és	és	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+33	–	–	X	[Hyph:Dash]	_	_	_	_	_	O	O	_	_
+34	ha	ha	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+35	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+36	lakcímétől	lakcím	NOUN	[/N][Poss.3Sg][Abl]	Case=Abl|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+37	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+38	székhelyétől	székhely	NOUN	[/N][Poss.3Sg][Abl]	Case=Abl|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	O	7:793082-12, 2416, 4006	3:4158
+39	)	)	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+40	eltér	eltér	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+41	–	–	X	[Hyph:Dash]	_	_	_	_	_	O	O	_	_
+42	postai	postai	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+43	értesítési	értesítési	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+44	címét.	cím	NOUN	[/N][AnP][Acc][Punct]	Case=Acc|Number=Sing|Number[psed]=Sing	_	_	_	SpaceAfter=No	O	I-NP	8:1077665-10, 1021, 24, 2441;3573426-1011	_
+45	”	”	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+46	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+47	Ve	V	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	B-ORG	I-NP	_	_
+48	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s29
+# text = 77. § (5) bekezdése alapján a kifogást érdemi vizsgálat nélkül el kell utasítani, ha elkésett, vagy nem tar talmazza a Ve.
+1	77.	77	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+4	5)	5	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+5	bekezdése	bekezdés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	1:144037-1011	_
+6	alapján	alap	NOUN	[/N][Poss.3Sg][Supe]	Case=Sup|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+7	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	O	_	_
+8	kifogást	kifogás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	O	2:3577565-1011, 1221	_
+9	érdemi	érdemi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	3:3577563-1011, 1221	_
+10	vizsgálat	vizsgálat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	3;4:813116-2841;2149542-1021, 4026, 5606	1:867
+11	nélkül	nélkül	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+12	el	el	ADV	[/Prev]	_	_	_	_	_	O	O	_	_
+13	kell	kell	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+14	utasítani	utasít	VERB	[/V][Inf]	VerbForm=Inf|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+15	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+16	ha	ha	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+17	elkésett	elkésik	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+18	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+19	vagy	vagy	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+20	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+21	tar	tar	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+22	talmazza	talmaz	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+23	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+24	Ve	V	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+25	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s30
+# text = 77. § (2) bekezdése a)–c) pontjában foglaltakat.
+1	77.	77	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+4	2)	2	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+5	bekezdése	bekezdés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	1:144037-1011	_
+6	a)–c)	a)–c)	NOUN	[/N]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+7	pontjában	pont	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	2:815964-1011;3573427-1011	_
+8	foglaltakat	foglalt	ADJ	[/Adj][Pl][Acc]	Case=Acc|Degree=Pos|Number=Plur	_	_	_	SpaceAfter=No	O	B-NP	_	_
+9	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s31
+# text = A kifogás benyújtója a határozattal szemben nem fogalmazta meg, hogy miért tartja az OVB döntését jogszabálysértőnek, nem jelölt meg azzal kapcsolatban konkrét jogsértést.
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	kifogás	kifogás	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	1:3577565-1011, 1221	_
+3	benyújtója	benyújtó	ADJ	[/Adj][Poss.3Sg][Nom]	Case=Nom|Degree=Pos|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+4	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	O	_	_
+5	határozattal	határozat	NOUN	[/N][Ins]	Case=Ins|Number=Sing	_	_	_	_	O	O	2:783584-1011;1080835-1011, 2011	1:348
+6	szemben	szemben	ADP	[/Post|(Ins)]	_	_	_	_	_	O	O	_	_
+7	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+8	fogalmazta	fogalmaz	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+9	meg	meg	PART	[/Prev]	_	_	_	_	SpaceAfter=No	O	O	_	_
+10	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+11	hogy	hogy	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+12	miért	miért	PRON	[/Adv|Pro|Int]	Case=Nom|Number=Sing|Person=3|PronType=Int	_	_	_	_	O	O	_	_
+13	tartja	tart	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+14	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+15	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+16	döntését	döntés	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	3:1437530-2826, 3236	_
+17	jogszabálysértőnek	jogszabálysértő	ADJ	[/Adj][Dat]	Case=Dat|Degree=Pos|Number=Sing	_	_	_	SpaceAfter=No	O	B-NP	_	_
+18	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+19	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+20	jelölt	jelölt	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	B-NP	_	2:5105
+21	meg	meg	PART	[/Prev]	_	_	_	_	_	O	O	_	_
+22	azzal	az	PRON	[/Det|Pro][Ins]	Case=Ins|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+23	kapcsolatban	kapcsolat	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	I-NP	_	_
+24	konkrét	konkrét	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+25	jogsértést	jogsértés	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+26	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s32
+# text = Az Alkotmánybíróság e kifogást nem tekinti érdemben elbírálható kifogásnak, mert az nem felel meg a törvényi követelményeknek.
+1	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	1:321349-12, 1206;3545269-1226	1:5692
+3	e	e	ADV	[/Det|Pro|def]	PronType=Art	_	_	_	_	O	B-NP	_	_
+4	kifogást	kifogás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	2:3577565-1011, 1221	_
+5	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+6	tekinti	tekint	VERB	[/V][Prs.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+7	érdemben	érdem	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	B-NP	_	_
+8	elbírálható	elbírálható	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	_	_
+9	kifogásnak	kifogás	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	3:3577565-1011, 1221	_
+10	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+11	mert	mert	SCONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+12	az	az	PRON	[/Det|Pro][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
+13	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	O	_	_
+14	felel	felel	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+15	meg	meg	PART	[/Prev]	_	_	_	_	_	O	O	_	_
+16	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+17	törvényi	törvényi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+18	követelményeknek	követelmény	NOUN	[/N][Pl][Dat]	Case=Dat|Number=Plur	_	_	_	SpaceAfter=No	O	I-NP	_	_
+19	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s33
+# text = Az Alkotmánybíróság a tartalmi feltételeknek meg nem felelő kifogást az Abtv.
+1	Az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	1:321349-12, 1206;3545269-1226	1:5692
+3	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+4	tartalmi	tartalmi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+5	feltételeknek	feltétel	NOUN	[/N][Pl][Dat]	Case=Dat|Number=Plur	_	_	_	_	O	I-NP	_	_
+6	meg	meg	PART	[/Prev]	_	_	_	_	_	O	O	_	_
+7	nem	nem	ADV	[/Adv]	PronType=Neg	_	_	_	_	O	B-NP	_	_
+8	felelő	felelő	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+9	kifogást	kifogás	NOUN	[/N][Acc]	Case=Acc|Number=Sing	_	_	_	_	O	I-NP	2:3577565-1011, 1221	_
+10	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+11	Abtv	Abtv	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	B-ORG	I-NP	_	_
+12	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s34
+# text = 22. § (2) bekezdése, valamint a Ve.
+1	22.	22	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
+4	2)	2	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	O	_	_
+5	bekezdése	bekezdés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	O	1:144037-1011	_
+6	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+7	valamint	valamint	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
+8	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+9	Ve	V	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+10	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s35
+# text = 116. §-ában és a Ve.
+1	116.	116	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	§-ában	§	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+3	és	és	CONJ	[/Cnj]	_	_	_	_	_	O	I-NP	_	_
+4	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	I-NP	_	_
+5	Ve	V	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+6	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s36
+# text = 77. § (5) bekezdésében foglaltak alapján érdemi vizsgálat nélkül visszautasította.
+1	77.	77	ADJ	[/Num|Digit][_Ord/Adj][Nom][]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	B-NP	_	_
+2	§	§	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+3	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	I-NP	_	_
+4	5)	5	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	I-NP	_	_
+5	bekezdésében	bekezdés	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	1:144037-1011	_
+6	foglaltak	foglalt	ADJ	[/Adj][Pl][Nom]	Case=Nom|Degree=Pos|Number=Plur	_	_	_	_	O	I-NP	_	_
+7	alapján	alap	NOUN	[/N][Poss.3Sg][Supe]	Case=Sup|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+8	érdemi	érdemi	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	O	2:3577563-1011, 1221	_
+9	vizsgálat	vizsgálat	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	O	2;3:813116-2841;2149542-1021, 4026, 5606	1:867
+10	nélkül	nélkül	ADP	[/Post]	_	_	_	_	_	O	O	_	_
+11	visszautasította	visszautasít	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
+12	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s37
+# text = A végzés közzétételét az OVB határozatnak a Magyar Közlönyben való megjelenésére tekintettel rendelte el az Alkotmánybíróság.
+1	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+2	végzés	végzés	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	1:3548733-1221;3577647-1011, 1221	_
+3	közzétételét	közzététel	NOUN	[/N][Poss.3Sg][Acc]	Case=Acc|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	2:748151-4026;2248915-12, 24;3516711-3221;3519509-4026	1:2859
+4	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+5	OVB	OVB	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+6	határozatnak	határozat	NOUN	[/N][Dat]	Case=Dat|Number=Sing	_	_	_	_	O	I-NP	3:783584-1011;1080835-1011, 2011	2:348
+7	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+8	Magyar	Magyar	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	_	_
+9	Közlönyben	közlöny	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
+10	való	való	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
+11	megjelenésére	megjelenés	NOUN	[/N][Poss.3Sg][Subl]	Case=Sub|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+12	tekintettel	tekintet	NOUN	[/N][Ins]	Case=Ins|Number=Sing	_	_	_	_	O	B-NP	_	_
+13	rendelte	rendel	VERB	[/V][Pst.Def.3Sg]	Definite=Def|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
+14	el	el	ADV	[/Prev]	_	_	_	_	_	O	O	_	_
+15	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
+16	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	B-ORG	I-NP	4:321349-12, 1206;3545269-1226	3:5692
+17	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
+
+# sent_id = veg_892007_xi_8_ab-s38
+# text = Dr. Bihari Mihály s. k., az Alkotmánybíróság elnöke
+1	Dr.	dr.	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	_	O	B-NP	_	_
+2	Bihari	Bihari	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-PER	I-NP	_	_
+3	Mihály	Mihály	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	I-PER	I-NP	_	_
+4	s.	s	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+5	k.	k	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
+6	,	,	PUNCT	[Punct]	_	_	_	_	_	O	I-NP	_	_
+7	az	az	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	I-NP	_	_
+8	Alkotmánybíróság	alkotmánybíróság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-ORG	I-NP	1:321349-12, 1206;3545269-1226	1:5692
+9	elnöke	elnök	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+
