@@ -95,5 +95,5 @@ tools = [(em_token, ('tok', 'emToken')),
          (em_conll, ('conll', 'emCoNLL'))]
 
 # cat input.txt | ./main.py tok,morph,pos,conv-morph,dep -> cat input.txt | ./main.py tok-dep
-presets = {'annotate': ('Full pipeline', ['tok', 'morph', 'pos', 'chunk', 'ner', 'conv-morph',
+presets = {'annotate': ('Full pipeline', ['tok', 'morph', 'pos', 'conv-morph', 'chunk', 'ner',
                                           'fix-np', 'fix-ner', 'mmeta', 'term-iate', 'term-eurovoc', 'conll'])}
