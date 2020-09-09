@@ -8,4 +8,4 @@ https://github.com/vadno/emconll/releases/download/v1.1.0/emconll-1.1.0-py3-none
 https://github.com/dlt-rilmta/emterm/releases/download/v1.1.0/emterm-1.1.0-py3-none-any.whl
 https://github.com/dlt-rilmta/HunTag3/releases/download/v3.0.1/huntag-3.0.1-py3-none-any.whl
 https://github.com/vadno/emmorph2ud/releases/download/v1.0.0/emmorph2ud-1.0.0-py3-none-any.whl
-https://github.com/dlt-rilmta/emIOBUtils/releases/download/v1.0.0/emiobutils-1.0.0-py3-none-any.whl
+https://github.com/dlt-rilmta/emIOBUtils/releases/download/v1.1.0/emiobutils-1.1.0-py3-none-any.whl
