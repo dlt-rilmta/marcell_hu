@@ -29,13 +29,13 @@ VERSION = $$(grep -E "__version__\s*=\s*'[^']+'" __init__.py | sed  -r "s/__vers
 
 ## build docker image
 dbuild:
-	docker build -t mtaril/emtsv:latest -t mtaril/emtsv:$(VERSION) .
+	docker build -t mtaril/marcell_hu:latest -t mtaril/marcell_hu:$(VERSION) .
 .PHONY: dbuild
 
 
 ## build docker test image
 dbuildtest:
-	docker build -t mtaril/emtsv:test .
+	docker build -t mtaril/marcell_hu:test .
 .PHONY: dbuildtest
 
 
@@ -44,17 +44,17 @@ drun:
 	@make -s dstop
 	@myport=$$(./docker/freeportfinder.sh) ; \
 		if [ -z "$${myport}" ] ; then echo 'ERROR: no free port' ; exit 1 ; fi ; \
-		docker run --name emtsv -p $${myport}:5000 --rm -d mtaril/emtsv:latest ; \
-		echo "OK: emtsv container run on port $${myport}" ;
+		docker run --name marcell_hu -p $${myport}:5000 --rm -d mtaril/marcell_hu:latest ; \
+		echo "OK: marcell_hu container run on port $${myport}" ;
 .PHONY: drun
 
 
-# connect emtsv container that is already running
+# connect marcell_hu container that is already running
 dconnect:
-	@if [ "$$(docker container ls -f name=emtsv -q)" ] ; then \
-		docker exec -it emtsv /bin/sh ; \
+	@if [ "$$(docker container ls -f name=marcell_hu -q)" ] ; then \
+		docker exec -it marcell_hu /bin/sh ; \
 	else \
-		echo 'no running emtsv container' ; \
+		echo 'no running marcell_hu container' ; \
 	fi
 .PHONY: dconnect
 
@@ -66,12 +66,12 @@ dtest: # dbuildtest
 
 
 
-## stop running emtsv container
+## stop running marcell_hu container
 dstop:
-	@if [ "$$(docker container ls -f name=emtsv -q)" ] ; then \
-		docker container stop emtsv ; \
+	@if [ "$$(docker container ls -f name=marcell_hu -q)" ] ; then \
+		docker container stop marcell_hu ; \
 	else \
-		echo 'no running emtsv container' ; \
+		echo 'no running marcell_hu container' ; \
 	fi
 .PHONY: dstop
 
