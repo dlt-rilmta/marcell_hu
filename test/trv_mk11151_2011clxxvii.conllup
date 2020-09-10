@@ -2205,7 +2205,7 @@
 19	szerinti	szerinti	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
 20	azon	azon	ADV	[/Det|Pro|def]	PronType=Art	_	_	_	_	O	I-NP	_	_
 21	Magyarországon	Magyarország	PROPN	[/N][Supe]	Case=Sup|Number=Sing	_	_	_	_	B-LOC	B-NP	_	1:1255
-22	élőkről	élő	NOUN	[/N][Pl][Del]	Case=Del|Number=Plur	_	_	_	SpaceAfter=No	O	I-NP	_	_
+22	élőkről	élő	NOUN	[/N][Pl][Del]	Case=Del|Number=Plur	_	_	_	SpaceAfter=No	O	B-NP	_	_
 23	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
 24	akiknek	aki	PRON	[/N|Pro|Rel][Pl][Dat]	Case=Dat|Number=Plur|Person=3|PronType=Rel	_	_	_	_	O	B-NP	_	_
 25	van	van	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
@@ -2215,7 +2215,7 @@
 29	vagy	vagy	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
 30	–	–	X	[Hyph:Dash]	_	_	_	_	_	O	O	_	_
 31	ennek	ez	PRON	[/Det|Pro][Dat]	Case=Dat|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
-32	hiányában	hiány	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+32	hiányában	hiány	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	B-NP	_	_
 33	–	–	X	[Hyph:Dash]	_	_	_	_	_	O	O	_	_
 34	tartózkodási	tartózkodási	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	B-NP	4:841794-12, 2816	_
 35	helye	hely	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	4	_
@@ -2838,7 +2838,7 @@
 13	alkalmazásával	alkalmazás	NOUN	[/N][Poss.3Sg][Ins]	Case=Ins|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	_	_
 14	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
 15	annak	az	PRON	[/Det|Pro][Dat]	Case=Dat|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
-16	hiányában	hiány	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	_	_
+16	hiányában	hiány	NOUN	[/N][Poss.3Sg][Ine]	Case=Ine|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	B-NP	_	_
 17	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
 18	természetes	természetes	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
 19	személyazonosító	személyazonosító	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	1:886598-1231, 2811, 3226	_
@@ -4841,7 +4841,7 @@
 11	ALKALMASSÁG	alkalmasság	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	I-ORG	I-NP	_	_
 12	MEGÁLLAPÍTÁSÁNAK	megállapítás	NOUN	[/N][Poss.3Sg][Dat]	Case=Dat|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	I-ORG	I-NP	_	_
 13	ELŐKÉSZÍTÉSE	előkészítés	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	I-ORG	B-NP	5:1087928-6011, 6036	_
-14	21	21	NUM	[/Num|Digit][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	SpaceAfter=No	O	I-NP	_	_
+14	21	21	NUM	[/Num|Digit][Nom]	Case=Nom|Number=Sing|NumType=Card	_	_	_	SpaceAfter=No	O	B-NP	_	_
 15	.	.	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
 
 # sent_id = trv_2011_clxxvii-s103-p30
@@ -4949,7 +4949,7 @@
 60	került	kerül	VERB	[/V][Pst.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin|Voice=Act	_	_	_	SpaceAfter=No	O	O	_	_
 61	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
 62	annak	az	PRON	[/Det|Pro][Dat]	Case=Dat|Number=Sing|Person=3|PronType=Dem	_	_	_	_	O	B-NP	_	_
-63	eredménye	eredmény	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	6:3520203-4026	_
+63	eredménye	eredmény	NOUN	[/N][Poss.3Sg][Nom]	Case=Nom|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	B-NP	6:3520203-4026	_
 64	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
 65	valamint	valamint	CONJ	[/Cnj]	_	_	_	_	_	O	O	_	_
 66	ac	ac	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	SpaceAfter=No	O	B-NP	_	_
@@ -6123,7 +6123,7 @@
 82	elteltével	eltelte	NOUN	[/N][Poss.3Sg][Ins]	Case=Ins|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	_	_
 83	,	,	PUNCT	[Punct]	_	_	_	_	_	O	O	_	_
 84	d)	d	NOUN	[/N][Nom][Punct]	Case=Nom|Number=Sing	_	_	_	_	O	B-NP	_	_
-85	aki	aki	PRON	[/N|Pro|Rel][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Rel	_	_	_	_	O	I-NP	_	_
+85	aki	aki	PRON	[/N|Pro|Rel][Nom]	Case=Nom|Number=Sing|Person=3|PronType=Rel	_	_	_	_	O	B-NP	_	_
 86	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
 87	sorozásról	sorozás	NOUN	[/N][Del]	Case=Del|Number=Sing	_	_	_	_	O	I-NP	_	_
 88	távol	távol	ADV	[/Adv]	_	_	_	_	_	O	O	_	_
@@ -6397,7 +6397,7 @@
 14	1)	1	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	O	_	_
 15	E	e	ADV	[/Det|Pro|def]	PronType=Art	_	_	_	_	O	O	_	_
 16	törvényben	törvény	NOUN	[/N][Ine]	Case=Ine|Number=Sing	_	_	_	_	O	B-NP	_	1:1697
-17	foglaltakat	foglalt	ADJ	[/Adj][Pl][Acc]	Case=Acc|Degree=Pos|Number=Plur	_	_	_	_	O	I-NP	_	_
+17	foglaltakat	foglalt	ADJ	[/Adj][Pl][Acc]	Case=Acc|Degree=Pos|Number=Plur	_	_	_	_	O	B-NP	_	_
 18	kell	kell	VERB	[/V][Prs.NDef.3Sg]	Definite=Ind|Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	_	_	_	_	O	O	_	_
 19	alkalmazni	alkalmaz	VERB	[/V][Inf]	VerbForm=Inf|Voice=Act	_	_	_	_	O	O	_	_
 20	a	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
