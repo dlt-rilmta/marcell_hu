@@ -14,11 +14,8 @@ usage:
 # ----------
 
 venv:
-	# rm -rf venv
-	# python3 -m venv venv
-	venv/bin/pip install Cython
+	[ -d venv ] && echo '' || python3 -m venv venv
 	venv/bin/pip install -r requirements.txt
-	for req in */requirements.txt ; do venv/bin/pip install -r $${req} ; done
 .PHONY: venv
 
 # ----------------------
