@@ -2,10 +2,13 @@
 MARCELL projekt Docker
 
 ## Leírás
+
 ***
+
 - Magyar jogi szövegek elemzését teszi lehetővé a MARCELL projekt számára.
 - Jelenleg elemezhető magyar jogi szövegek típusai, amiket elfogad a marcell_hu: 
-*állásfoglalás, határozat, intézkedés, közlemény, nyilatkozat, parancs, rendelet, szakutasítás, tájékoztató, törvény, utasítás, végzés*
+*állásfoglalás, határozat, intézkedés, közlemény, nyilatkozat, parancs, rendelet, szakutasítás, tájékoztató, törvény, utasítás, végzés.*
+
 ***
 
 ## Installáció:
@@ -13,6 +16,7 @@ MARCELL projekt Docker
 `git clone https://github.com/dlt-rilmta/marcell_hu.git`
 - Dependnciák telepítése:
 `pip3 install -r requirements.txt`
+
 ***
 
 ## Command-line interface-es használata:
@@ -26,6 +30,7 @@ cat input.txt | python3 main.py tok,morph,pos,conv-morph,chunk,ner,fix-np,fix-ne
 cat input.txt | python3 main.py annotate > output.conllup
 
 ```
+
 ***
 
 ## Modulok:
