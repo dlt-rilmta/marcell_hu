@@ -23,11 +23,11 @@ MARCELL projekt Docker
 - Input: az [előre meghatározott típusok](https://github.com/dlt-rilmta/marcell_hu#le%C3%ADr%C3%A1s) közül egy darab elemzetlen (vagy elemzett) jogi szöveg.
 - A modulok sorrendben való meghívása:
 ```bash 
-cat input.txt | python3 main.py tok,morph,pos,conv-morph,chunk,ner,fix-np,fix-ner,mmeta,term-iate,term-eurovoc,conll > output.conllup
+cat input.txt | python3 main.py --conllu-comments tok,morph,pos,conv-morph,chunk,ner,fix-np,fix-ner,mmeta,term-iate,term-eurovoc,conll > output.conllup
 ```
 - Annotate-tel, ami ugyanazt az eredményt adja, mintha meghívnánk az összes modult egymás után:
 ```bash
-cat input.txt | python3 main.py annotate > output.conllup
+cat input.txt | python3 main.py --conllu-comments annotate > output.conllup
 
 ```
 
