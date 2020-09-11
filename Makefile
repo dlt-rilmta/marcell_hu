@@ -58,7 +58,7 @@ dconnect:
 
 # test the test image
 dtest: # dbuildtest
-	@cd tests/ && ./dtest.sh
+	@./test/dtest.sh
 .PHONY: dtest
 
 
