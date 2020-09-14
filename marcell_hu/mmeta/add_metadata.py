@@ -88,6 +88,9 @@ class MMeta:
         # every new document gets global header also to make sure it gets sentence id and paragraph id from 1.
         self._sentence_count = 0
         self._paragraph_number = 1
+        self._get_paragraph_infos = self._get_no_paragraph_infos
+        self._doc_type = 'ISMERETLEN'
+        self._identifier = ''
 
         return field_names
 
