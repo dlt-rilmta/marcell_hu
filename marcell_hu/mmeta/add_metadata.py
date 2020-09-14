@@ -83,6 +83,12 @@ class MMeta:
         :param field_names: emtsv header
         :return: Mapping of the mandatory CoNLL field names to the current indices
         """
+
+        # Since prepare_fields() called for every new document, now this is the way of making sure, that
+        # every new document gets global header also to make sure it gets sentence id and paragraph id from 1.
+        self._sentence_count = 0
+        self._paragraph_number = 1
+
         return field_names
 
     def _get_global_metadatas(self, sen):
