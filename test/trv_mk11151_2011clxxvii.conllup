@@ -6436,8 +6436,8 @@
 53	Magyarország	Magyarország	PROPN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	B-LOC	I-NP	_	4:1255
 54	területén	terület	NOUN	[/N][Poss.3Sg][Supe]	Case=Sup|Number=Sing|Number[psor]=Sing|Person[psor]=3	_	_	_	_	O	I-NP	10:1483164-1631, 24, 56	_
 55	tartózkodó	tartózkodó	ADJ	[/Adj][Nom]	Case=Nom|Degree=Pos|Number=Sing	_	_	_	_	O	I-NP	_	_
-56	hozzátartozóira.	hozzátartozói	ADJ	[/Adj][Subl][Punct]	Case=Sub|Degree=Pos|Number=Sing	_	_	_	SpaceAfter=No	O	I-NP	_	_
-57	”	”	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	I-NP	_	_
+56	hozzátartozóira.	hozzátartozó	NOUN	[/N][Pl.Poss.3Sg][Subl][Punct]	Case=Sub|Number=Plur|Number[psor]=Sing|Person[psor]=3	_	_	_	SpaceAfter=No	O	I-NP	_	_
+57	”	”	NOUN	[/N][Nom]	Case=Nom|Number=Sing	_	_	_	_	O	B-NP	_	_
 58	(	(	PUNCT	[Punct]	_	_	_	_	SpaceAfter=No	O	O	_	_
 59	3)	3	ADJ	[/Num|Digit][Nom][Punct]	Case=Nom|Number=Sing|NumType=Ord	_	_	_	_	O	O	_	_
 60	A	a	DET	[/Det|Art.Def]	Definite=Def|PronType=Art	_	_	_	_	O	B-NP	_	_
