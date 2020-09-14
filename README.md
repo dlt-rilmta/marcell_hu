@@ -6,7 +6,7 @@
 make dbuild
 ```
 
-## run the docker image
+## run the container
 
 ```bash
 make drun
@@ -15,8 +15,8 @@ make drun
 ## usage
 
 The API is listening for HTTP POST requests under the `/annotate` path.
-There is only one parameter: `text` = raw text file path.
-(Last line must be az empty line.)
+Form data is: `text` = raw text file path
+(last line must be an empty line)
 
 ```bash
 curl -F "file=@<FILEPATH>" localhost:<port>/annotate
@@ -24,7 +24,7 @@ curl -F "file=@<FILEPATH>" localhost:<port>/annotate
 
 `<port>` is taken from the output of `make drun`.
 
-## stop the docker image
+## stop the container
 
 ```bash
 make dstop
@@ -32,7 +32,7 @@ make dstop
 
 ***
 
-(Hungarian part)
+(Hungarian part follows)
 
 ## Leírás
 
