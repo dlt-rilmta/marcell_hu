@@ -1,7 +1,7 @@
 # global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC MARCELL:NE MARCELL:NP MARCELL:IATE MARCELL:EUROVOC
 # newdoc id = hu-veg_892007_xi_8_ab
 # date = 2007
-# title = 89/2007. (XI. 8.) AB végzés
+# title = 89/2007. (XI. 8.) AB végzése
 # type = végzés
 # entype = judgment
 # issuer = AB

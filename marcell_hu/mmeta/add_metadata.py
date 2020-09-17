@@ -2,6 +2,25 @@
 
 import re
 
+"""
+Nem kommittolt változások (2020.09.17):
+ - Hibaüzenetet dob a program, ha nem megfelelő a bemeneti törvénycím
+ - A törvénycímek utolsó szava nem a lemma, ahogy eddig, hanem a szóalak.
+   Eddig a title.split()[-1] alapján határozódott meg a dokumentum id perfixe (hat, trv, stb),
+   amihez a lemmát nézi a program egy szótárban és párosítja hozzá a rövidítést.
+   A lemma a self.doctype-nak van átadva és most ez alapján határozódik meg a prefix,
+   tehát a title utolsó szava lehet az eredeti szóalak, nem kell lemmának lennie. Ez azért
+   jobb, mert így megmarad az eredeti cím
+   - 
+"""
+
+class LawTitleNotFound(Exception):
+    """
+    Error when there is an error in title or title not found in the input
+    legislation to process and to identify the input legislation with.
+    """
+    pass
+
 
 class MMeta:
     pass_header = True
@@ -29,6 +48,7 @@ class MMeta:
                              "közlemény": "koz",
                              "nyilatkozat": "nyil",
                              "utasítás": "ut",
+                             "szakutasítás": "szakut",
                              "állásfoglalás": "all",
                              "tájékoztató": "taj",
                              "intézkedés": "int",
@@ -132,7 +152,7 @@ class MMeta:
                     self._doc_type = line[3]
                     if self._doc_type == "törvény" or self._doc_type == "rendelet":
                         self._get_paragraph_infos = self._get_real_paragraph_infos
-                    title += self._doc_type
+                    title += line[0]
                     is_title_end = True
                     is_topic = True
 
@@ -142,10 +162,16 @@ class MMeta:
                 else:
                     title += line[0] + space
 
-        splitted_title = title.split()
+        splitted_title = title.strip().split()
+
+        if len(splitted_title) < 3 or self._doc_type == 'ISMERETLEN':
+            self._doc_type = splitted_title[-1]
+            raise LawTitleNotFound(f'Error in title or title not found.\n'
+                                   f'Document type is invalid: {self._doc_type}\n'
+                                   f'Input is maybe not a valid hungarian legislative text.\n')
 
         self._identifier = self._pat_whs_and_puncts.sub('',
-                                                        f'{self._prefix_dict[splitted_title[-1]]}'
+                                                        f'{self._prefix_dict[self._doc_type]}'
                                                         f'_{"_".join(splitted_title[:-1]).lower().translate(self._accent_table)}')
 
         # From here: finalize global metadata values
@@ -153,7 +179,7 @@ class MMeta:
         eng_type = f'# entype = {self._doc_types_hun_eng[self._doc_type]}'  # self._doc_types_hun_eng.get(self._doc_type, 'UNKNOWN')
         hun_type = f'# type = {self._doc_type}'
 
-        issuer = title.split()[-2] if self._doc_type != 'törvény' else 'parlament'
+        issuer = splitted_title[-2] if self._doc_type != 'törvény' else 'parlament'
         issuer = f'# issuer = {issuer}'
 
         title = f'# title = {title}'
